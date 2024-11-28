@@ -3,7 +3,13 @@
 ## Capstone Project 
 
 ### Export a CSV File from SQL Server
-1. From SQL Server export out a csv file from the following query. This gives you the top 30% of values. :
+
+1. Create a new text file named **myorders** in the **C:** drive. 
+
+1. In SQL Server Management Studio, click on **New Query** and paste the code below. This query exports data from SQL Server to a CSV file, extracting the top 30% of values based on the specified criteria.
+
+   ![newquerya](images/newquerya.png)
+
     ```
     WITH RankedData AS (
         SELECT 
@@ -26,23 +32,45 @@
         row_num <= total_rows * 0.99;  -- Filtering for the top 30%
     ```
 
-1. From the database use the context menu and select Export Data
+1. Click on **Execute** from the top toolbar and review the results once the query execution is complete.
 
-    ![exportdata 2](images/exportdata2.png)
-    
-1. For the **Choose a Data Source** screen set the following and click **Next**
-    - Data source: SQL Native Client 11.0
-    - Server name: Leave default value
-    - Change to SQL Server Authentication
-        - Put in username and password
-    - Database: Leave default
+    ![exportdata2a](images/exportdata2a.png)
 
-    ![datasource](images/datasource.png)
-    
-1. Set the Destination to **Flat File Destination**. Make sure you check **Unicode**
+1. From the database list, locate and select your database **AzureAIHack**. Right-click on it, then navigate to **Tasks** and choose **Export Data**.
 
-    ![flatfileunicode](images/flatfileunicode.png)
-    
+   ![exportdata2b](images/exportdata2b.png)
+
+1. On the **Welcome to SQL Server Import and Export Wizard** page, click **Next** to proceed.
+
+   ![welcome](images/welcome.png)
+
+2. On the **Choose a Data Source** page:  
+
+   - Set **Data source** to **Microsoft OLE DB Provider for SQL Server**.
+
+   - Enter the **Server name** as the default value.
+
+   - For **Authentication**, select **Use SQL Server Authentication** and provide the following credentials:
+
+     - **User name**: `sqladmin`
+     - **Password**: `X5FsphLufmY6xHFHaGUR`
+ 
+   - Choose **Database** as `AzureAIHack` and click **Next**.
+
+     ![datasource](images/datasourcea.png)
+
+4. On the **Choose a Destination** page:
+
+   - Select **Flat File Destination** as the destination type.
+
+   - Click the **Browse** button and select the file you just created.
+
+   - Enable the checkbox for **Unicode** to support special characters.
+
+   - Click **Next** to proceed.
+
+     ![flatfileunicodea](images/flatfileunicodea.png)
+
 1. Select a folder to export the file out to. Make sure the type of csv is selected
 
     ![outputcsv](images/outputcsv.png)
@@ -51,37 +79,37 @@
 
 1. Change the radio button to **Write a query to specify the data to transfer** then click **Next**
 
-    ![query](images/query.png)
-    
-1. Copy in the query and click **Next**
+   ![query](images/top30percenta.png)
 
-    ![top 30percent](images/top30percent.png)
+1. On the **Provide a Source Query** page, Paste the query that you copied earlier into the query box and then click **Next** to proceed.
+
+   ![top 30percentb](images/top30percentb.png)
     
-1. Then click **Next**, **Next**, and finally **Finish** to run the SSIS job.
+1. Click **Next** to proceed through the following configuration pages, On the final page, click **Finish** to execute the SSIS job and export the data.
 
 ### Setup a Vector Index
 
 1. Return to AI Studio and open your previous project
 
-1. Click on **Data** in the navigation and then click on the **New data** button
+1. In **AzureAI Studio**, go to the **Data files (1)** section from the left menu, click **+ Add data (2)**, and select **For assistans (3)**.
 
-    ![newdata](images/newdata.png)
-    
-1. From the **Data source** dropdown select **Upload files/folders**
+    ![](images/datafiles.png)
 
-    ![uploadfilesdata](images/uploadfilesdata.png)
-    
-1. Select **Upload files** from the button
+2. Click **Select local files**, choose the **myorders** file, and click **Open**.  
 
-    ![uploadbutton](images/uploadbutton.png)
-    
+1. Select the exported csv file and then click **Open**.
+
+   ![exportedcsv](images/exportedcsv.png)
+
+3. Click **Upload** to upload the file.
+
+    ![](images/datafiles1.png)
+    ![](images/datafiles2.png)
+
 1. Select the exported csv file and then click **Next**
 
     ![exportedcsv](images/exportedcsv.png)
-    
-1. Provide a unique **Data name** then click **Create**
 
-    ![dataname](images/dataname.png)
     
 1. Next click on **Indexes** and click **+ New index**
 
