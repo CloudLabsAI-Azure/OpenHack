@@ -32,13 +32,12 @@
 
    ![createnewresource](images/view_all-1.png)
 
-1. Click on Create a new resource .
+    ![aiservices](images/aiservices.png)
+    
+    A. Click on the **Create a new reseource** link to get a popup. Give it some time to create the resource and follow the steps in **Part B**.
+    
+    B. Check the radio button next to the already and click the **Select as default resource** button 
 
-   ![createnewresource](images/aiservices-1.png)
-
-1. Click on the **Create a new reseource** link to get a popup. Give it some time to create the resource .
-        
-    ![createnewresource](images/new-resources.png)
     
 1. In the breadcrumbs click on the **Vision Studio** text
 
