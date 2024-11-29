@@ -4,8 +4,6 @@
 
 ### Export a CSV File from SQL Server
 
-1. Create a new text file named **myorders** in the **C:** drive. 
-
 1. In SQL Server Management Studio, click on **New Query** and paste the code below. This query exports data from SQL Server to a CSV file, extracting the top 30% of values based on the specified criteria.
 
    ![newquerya](images/newquerya.png)
@@ -63,7 +61,7 @@
 
    - Select **Flat File Destination** as the destination type.
 
-   - Click the **Browse** button and select the file you just created.
+   - In **File name**, specify the location and file name as **C:\myorders.csv**.
 
    - Enable the checkbox for **Unicode** to support special characters.
 
@@ -91,45 +89,48 @@
 
 1. Return to AI Studio and open your previous project
 
-1. In **AzureAI Studio**, go to the **Data files (1)** section from the left menu, click **+ Add data (2)**, and select **For assistans (3)**.
+1. Click on **Data + Indexes** in the navigation menu, then click on the **+ New Data** button.
 
-    ![](images/datafiles.png)
+   ![](images/newdata1.png)
 
-2. Click **Select local files**, choose the **myorders** file, and click **Open**.  
+1. From the **Data source** dropdown, select **Upload files/folders**.
 
-1. Select the exported csv file and then click **Open**.
+   ![](images/datasource1.png)
 
-   ![exportedcsv](images/exportedcsv.png)
+1. Click on **Upload files or folder**, then select **Upload files**.
 
-3. Click **Upload** to upload the file.
+   ![](images/datasource2.png)
 
-    ![](images/datafiles1.png)
-    ![](images/datafiles2.png)
+1. Select the exported csv file and then click **Next**.
 
-1. Select the exported csv file and then click **Next**
+   ![](images/outputcsv.png)
 
-    ![exportedcsv](images/exportedcsv.png)
+1. Provide a unique **Data name** then click **Create**.
 
-    
-1. Next click on **Indexes** and click **+ New index**
+   ![](images/undataname.png)
 
-    ![newindexes](images/newindexes.png)
-    
-1. From the dropdown select **Data in Azure AI Studio**
+1. Next click on **Indexes** and click **+ New index**.
 
-    ![datainstudio](images/datainstudio.png)
-    
-1. Click the radio button next to the **Data source** you created previously then click **Next**
+   ![](images/indeexes.png)
 
-    ![selectdata 1](images/selectdata1.png)
-    
+1. From the dropdown select **Data in Azure AI Studio**.
+
+   ![](images/dataloc1.png)
+
+2. Click the radio button next to the **Data source** you created previously then click **Next**.
+
+   ![](images/dataloc.png)
+
 1. Configure the **Azure AI Search** by selecting your **AI Search** and using the current **Index name** then click **Next**
 
-1. On the **Configure search settings** leave the default settings and then click **Next**
 
-    ![confisearch](images/confisearch.png)
-    
-1. Click **Create**
+1. On the **Configure search settings** leave the default settings and then click **Next**.
+
+   ![](images/vectorsetting.png)
+
+1. Click on **Create vector index**.
+
+   ![](images/vectorindex.png)
 
 1. Give the AI Studio time to complete the ingestion process
 
@@ -155,7 +156,6 @@
     ```
     based off the previous sales, what categories should be pre-ordered for each quarter?
     ```
-
 
     ![whenandkind](images/whenandkind.png)
     
@@ -281,7 +281,6 @@
 
     ```
     pip install azure-cosmos pandas
-    
     ```
 
 1. Run the following notebook file in a newly create Jupyter notebook file and folder.
