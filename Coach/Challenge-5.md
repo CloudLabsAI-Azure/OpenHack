@@ -3,7 +3,11 @@
 ## Capstone Project 
 
 ### Export a CSV File from SQL Server
-1. From SQL Server export out a csv file from the following query. This gives you the top 30% of values. :
+
+1. In SQL Server Management Studio, click on **New Query** and paste the code below. This query exports data from SQL Server to a CSV file, extracting the top 30% of values based on the specified criteria.
+
+   ![newquerya](images/newquerya.png)
+
     ```
     WITH RankedData AS (
         SELECT 
@@ -26,23 +30,45 @@
         row_num <= total_rows * 0.99;  -- Filtering for the top 30%
     ```
 
-1. From the database use the context menu and select Export Data
+1. Click on **Execute** from the top toolbar and review the results once the query execution is complete.
 
-    ![exportdata 2](images/exportdata2.png)
-    
-1. For the **Choose a Data Source** screen set the following and click **Next**
-    - Data source: SQL Native Client 11.0
-    - Server name: Leave default value
-    - Change to SQL Server Authentication
-        - Put in username and password
-    - Database: Leave default
+    ![exportdata2a](images/exportdata2a.png)
 
-    ![datasource](images/datasource.png)
-    
-1. Set the Destination to **Flat File Destination**. Make sure you check **Unicode**
+1. From the database list, locate and select your database **AzureAIHack**. Right-click on it, then navigate to **Tasks** and choose **Export Data**.
 
-    ![flatfileunicode](images/flatfileunicode.png)
-    
+   ![exportdata2b](images/exportdata2b.png)
+
+1. On the **Welcome to SQL Server Import and Export Wizard** page, click **Next** to proceed.
+
+   ![welcome](images/welcome.png)
+
+2. On the **Choose a Data Source** page:  
+
+   - Set **Data source** to **Microsoft OLE DB Provider for SQL Server**.
+
+   - Enter the **Server name** as the default value.
+
+   - For **Authentication**, select **Use SQL Server Authentication** and provide the following credentials:
+
+     - **User name**: `sqladmin`
+     - **Password**: `X5FsphLufmY6xHFHaGUR`
+ 
+   - Choose **Database** as `AzureAIHack` and click **Next**.
+
+     ![datasource](images/datasourcea.png)
+
+4. On the **Choose a Destination** page:
+
+   - Select **Flat File Destination** as the destination type.
+
+   - In **File name**, specify the location and file name as **C:\myorders.csv**.
+
+   - Enable the checkbox for **Unicode** to support special characters.
+
+   - Click **Next** to proceed.
+
+     ![flatfileunicodea](images/flatfileunicodea.png)
+
 1. Select a folder to export the file out to. Make sure the type of csv is selected
 
     ![outputcsv](images/outputcsv.png)
@@ -51,57 +77,60 @@
 
 1. Change the radio button to **Write a query to specify the data to transfer** then click **Next**
 
-    ![query](images/query.png)
-    
-1. Copy in the query and click **Next**
+   ![query](images/top30percenta.png)
 
-    ![top 30percent](images/top30percent.png)
+1. On the **Provide a Source Query** page, Paste the query that you copied earlier into the query box and then click **Next** to proceed.
+
+   ![top 30percentb](images/top30percentb.png)
     
-1. Then click **Next**, **Next**, and finally **Finish** to run the SSIS job.
+1. Click **Next** to proceed through the following configuration pages, On the final page, click **Finish** to execute the SSIS job and export the data.
 
 ### Setup a Vector Index
 
 1. Return to AI Studio and open your previous project
 
-1. Click on **Data** in the navigation and then click on the **New data** button
+1. Click on **Data + Indexes** in the navigation menu, then click on the **+ New Data** button.
 
-    ![newdata](images/newdata.png)
-    
-1. From the **Data source** dropdown select **Upload files/folders**
+   ![](images/newdata1.png)
 
-    ![uploadfilesdata](images/uploadfilesdata.png)
-    
-1. Select **Upload files** from the button
+1. From the **Data source** dropdown, select **Upload files/folders**.
 
-    ![uploadbutton](images/uploadbutton.png)
-    
-1. Select the exported csv file and then click **Next**
+   ![](images/datasource1.png)
 
-    ![exportedcsv](images/exportedcsv.png)
-    
-1. Provide a unique **Data name** then click **Create**
+1. Click on **Upload files or folder**, then select **Upload files**.
 
-    ![dataname](images/dataname.png)
-    
-1. Next click on **Indexes** and click **+ New index**
+   ![](images/datasource2.png)
 
-    ![newindexes](images/newindexes.png)
-    
-1. From the dropdown select **Data in Azure AI Studio**
+1. Select the exported csv file and then click **Next**.
 
-    ![datainstudio](images/datainstudio.png)
-    
-1. Click the radio button next to the **Data source** you created previously then click **Next**
+   ![](images/outputcsv.png)
 
-    ![selectdata 1](images/selectdata1.png)
-    
+1. Provide a unique **Data name** then click **Create**.
+
+   ![](images/undataname.png)
+
+1. Next click on **Indexes** and click **+ New index**.
+
+   ![](images/indeexes.png)
+
+1. From the dropdown select **Data in Azure AI Studio**.
+
+   ![](images/dataloc1.png)
+
+2. Click the radio button next to the **Data source** you created previously then click **Next**.
+
+   ![](images/dataloc.png)
+
 1. Configure the **Azure AI Search** by selecting your **AI Search** and using the current **Index name** then click **Next**
 
-1. On the **Configure search settings** leave the default settings and then click **Next**
 
-    ![confisearch](images/confisearch.png)
-    
-1. Click **Create**
+1. On the **Configure search settings** leave the default settings and then click **Next**.
+
+   ![](images/vectorsetting.png)
+
+1. Click on **Create vector index**.
+
+   ![](images/vectorindex.png)
 
 1. Give the AI Studio time to complete the ingestion process
 
@@ -114,29 +143,34 @@
 1. Completed
 
     ![completed](images/completed.png)
-    
-1. Then click the **Chat** link in the navigation. The click the Add your data tab
 
-    ![chat add data](images/chat-add-data.png)
+1. Navigate to **Playgrounds** and select **Try the Chat Playground**.
 
-1. From the dropdown **Select available project index** select the index previously created
+   ![](images/playground.png) 
 
-    ![projectindex](images/projectindex.png)
+1. Click the Add your data, From the dropdown **Select available project index** select the index previously created.
+
+   ![](images/index.png)
+
+1. Click on **Advanced settings** and uncheck the box for **Limit responses to your data content**.
+
+   ![](images/adsetting.png)
 
 1. To get an idea of the what kind and when you might need certain inventory use the following prompt:
+
     ```
     based off the previous sales, what categories should be pre-ordered for each quarter?
     ```
 
-
-    ![whenandkind](images/whenandkind.png)
+    ![whenandkind](images/whenandkinda.png)
     
 1. Use a Azure AI Studio prompt to generate a sample inventory needed
+
     ```
     based off the current orders what would be a provisional inventory as a csv file?
     ```
 
-    ![sampleprompt](images/sampleprompt.png)
+   ![sampleprompt](images/sampleprompta.png)
     
 1. Use the following sample csv file to import into the newly created **Cosmos DB**
 
@@ -232,31 +266,50 @@
     
 1. Finally create the Cosmos DB by clicking the **Create** button.-->
 
-1. In the Azure portal open the pre-deployed Cosmos DB and click on **Data Explorer** and select ** + New Container**
+1. In the Azure portal open the pre-deployed Cosmos DB and click on **Data Explorer** and select **+ New Container**
 
-    ![newcontainer](images/newcontainer.png)
+   ![newcontainer](images/newcontainera.png)
     
-1. Create a **Database id**, **Container id**, and also use **/category** as the **Partition key**. Then click **OK**
+1. Create a **Database ID** as **retail**, a **Container ID** as **inventory**, and set **/category** as the **Partition Key**. Then, click **OK**.
 
-    ![newcontainer 2](images/newcontainer2.png)
-    
+   ![newcontainer 2](images/newcontainer2a.png)
 
-    
 1. Get the following information for the Cosmos DB
 
     - URI
     - Primary Key
     - Database Name
     - Container Name
-    
+
+1. Navigate to **Keys**, then copy your **URI** and **Primary Key**.
+
+   ![](images/keysa.png)
+
+1. Start **Visual Studio Code** from the desktop.
+
+2. In the **Visual Studio Code**, Click on **Extensions**, search for **jupyter** and select the **jupyter**, click on **install**.
+
+   ![](images/jupyter.png)
+
+1. Install the **python** extension as well.
+
+1. Click on **File** and select **New File**.
+
+   ![](images/files.png)
+
+1. Click on the **Jupyter Notebook**.
+
+   ![](images/jupytern.png)
+
 1. Run the following before running the sample script
 
     ```
     pip install azure-cosmos pandas
-    
     ```
 
 1. Run the following notebook file in a newly create Jupyter notebook file and folder.
+
+    - Update the **COSMOS_DB_URL**, **COSMOS_DB_KEY**, **DATABASE_NAME**, and **CONTAINER_NAME** with the values you copied earlier.
 
     ```
     from azure.cosmos import CosmosClient, PartitionKey
@@ -298,10 +351,20 @@
 1. Here is a pre-built [Jupyter Notebook](https://openhackguides.blob.core.windows.net/ai-openhack/importtoCosmos.ipynb) of the script
 
 ### Setup Inventory Application
-1. Create a new folder from the command line and initialize the application
+
+1. Create a new folder as **Inventory** and open this folder in VS Code.
+
+1. In the Visual Studio Code terminal, click on **...** dots and select the **Terminal** (2) menu, select **New Terminal**.
+
+   ![](images/terminal.png)
+   ![](images/terminal1.png)
+
+1. Run the following command to initialize the application
+
     ```
     npm init -y
     ```
+
 1. Install Dependencies
 First, install the required dependencies using npm:
 
@@ -312,10 +375,11 @@ First, install the required dependencies using npm:
     - **@azure/cosmos**: Cosmos DB client.
     - **tedious**: SQL Server (Azure SQL) client for Node.js.
     - **bootstrap**: Frontend styling framework.
-    
 
-    
-1. You'll need to configure the connection for the Azure SQL Database. Here’s a basic setup using the tedious package. Create a file called dbconfig.js for the SQL configuration:
+1. You'll need to configure the connection for the **Azure SQL Database**. Here’s a basic setup using the tedious package. Create a file called **dbconfig.js** for the SQL configuration, Ensure to replace **`<URI>`** with the **SQL Server name**.
+
+    - **User name**: `sqladmin`
+    - **Password**: `X5FsphLufmY6xHFHaGUR`
 
     ```
     const { Connection, Request } = require('tedious');
@@ -381,11 +445,15 @@ First, install the required dependencies using npm:
 
     
     ```
-    
 
+1. Here is the main **app.js** file with three routes and lazy loading using Bootstrap tabs:
 
+1. Replace the following placeholders with your actual Cosmos DB configuration:
 
-1. Here is the main app.js file with three routes and lazy loading using Bootstrap tabs:
+    - your-cosmosdb-url
+    - your-cosmosdb-primary-key
+    - your-database-name
+    - your-container-name
 
     ```
     const express = require('express');
@@ -464,14 +532,10 @@ First, install the required dependencies using npm:
         console.log(`App running on http://localhost:${port}`);
     });
     ```
-1. In the above code, replace the following placeholders with your actual Cosmos DB configuration:
 
-    - your-cosmosdb-url
-    - your-cosmosdb-primary-key
-    - your-database-name
-    - your-container-name
+1. Create a new folder named **public** inside the **inventory** folder.
 
-1. In the public directory, create an index.html file with the Bootstrap tab navigation and lazy loading functionality.
+1. In the public directory, create an **index.html** file with the Bootstrap tab navigation and lazy loading functionality.
 
     ```
     <!DOCTYPE html>
@@ -637,13 +701,17 @@ First, install the required dependencies using npm:
     ├── package-lock.json  # npm lock file
     └── node_modules/      # (generated after npm install)
     ```
-    
+
+   ![](images/inventoryfolder.png)
+
 1. To run the application, use the following command:
 
     ```
     node app.js
     ```
-    
+
+   ![](images/app.png)
+
 1. Once the app is running, open a web browser and go to [http://localhost:3000](http://localhost:3000). You should see the data from Cosmos DB displayed in an HTML list format.
 
     ![Cosmosdata](images/Cosmosdata.png)
