@@ -143,28 +143,34 @@
 1. Completed
 
     ![completed](images/completed.png)
-    
-1. Then click the **Chat** link in the navigation. The click the Add your data tab
 
-    ![chat add data](images/chat-add-data.png)
+1. Navigate to **Playgrounds** and select **Try the Chat Playground**.
 
-1. From the dropdown **Select available project index** select the index previously created
+   ![](images/playground.png) 
 
-    ![projectindex](images/projectindex.png)
+1. Click the Add your data, From the dropdown **Select available project index** select the index previously created.
+
+   ![](images/index.png)
+
+1. Click on **Advanced settings** and uncheck the box for **Limit responses to your data content**.
+
+   ![](images/adsetting.png)
 
 1. To get an idea of the what kind and when you might need certain inventory use the following prompt:
+
     ```
     based off the previous sales, what categories should be pre-ordered for each quarter?
     ```
 
-    ![whenandkind](images/whenandkind.png)
+    ![whenandkind](images/whenandkinda.png)
     
 1. Use a Azure AI Studio prompt to generate a sample inventory needed
+
     ```
     based off the current orders what would be a provisional inventory as a csv file?
     ```
 
-    ![sampleprompt](images/sampleprompt.png)
+   ![sampleprompt](images/sampleprompta.png)
     
 1. Use the following sample csv file to import into the newly created **Cosmos DB**
 
@@ -260,23 +266,41 @@
     
 1. Finally create the Cosmos DB by clicking the **Create** button.-->
 
-1. In the Azure portal open the pre-deployed Cosmos DB and click on **Data Explorer** and select ** + New Container**
+1. In the Azure portal open the pre-deployed Cosmos DB and click on **Data Explorer** and select **+ New Container**
 
-    ![newcontainer](images/newcontainer.png)
+   ![newcontainer](images/newcontainera.png)
     
-1. Create a **Database id**, **Container id**, and also use **/category** as the **Partition key**. Then click **OK**
+1. Create a **Database ID** as **retail**, a **Container ID** as **inventory**, and set **/category** as the **Partition Key**. Then, click **OK**.
 
-    ![newcontainer 2](images/newcontainer2.png)
-    
+   ![newcontainer 2](images/newcontainer2a.png)
 
-    
 1. Get the following information for the Cosmos DB
 
     - URI
     - Primary Key
     - Database Name
     - Container Name
-    
+
+1. Navigate to **Keys**, then copy your **URI** and **Primary Key**.
+
+   ![](images/keysa.png)
+
+1. Start **Visual Studio Code** from the desktop.
+
+2. In the **Visual Studio Code**, Click on **Extensions**, search for **jupyter** and select the **jupyter**, click on **install**.
+
+   ![](images/jupyter.png)
+
+1. Install the **python** extension as well.
+
+1. Click on **File** and select **New File**.
+
+   ![](images/files.png)
+
+1. Click on the **Jupyter Notebook**.
+
+   ![](images/jupytern.png)
+
 1. Run the following before running the sample script
 
     ```
@@ -284,6 +308,8 @@
     ```
 
 1. Run the following notebook file in a newly create Jupyter notebook file and folder.
+
+    - Update the **COSMOS_DB_URL**, **COSMOS_DB_KEY**, **DATABASE_NAME**, and **CONTAINER_NAME** with the values you copied earlier.
 
     ```
     from azure.cosmos import CosmosClient, PartitionKey
@@ -325,10 +351,20 @@
 1. Here is a pre-built [Jupyter Notebook](https://openhackguides.blob.core.windows.net/ai-openhack/importtoCosmos.ipynb) of the script
 
 ### Setup Inventory Application
-1. Create a new folder from the command line and initialize the application
+
+1. Create a new folder as **Inventory** and open this folder in VS Code.
+
+1. In the Visual Studio Code terminal, click on **...** dots and select the **Terminal** (2) menu, select **New Terminal**.
+
+   ![](images/terminal.png)
+   ![](images/terminal1.png)
+
+1. Run the following command to initialize the application
+
     ```
     npm init -y
     ```
+
 1. Install Dependencies
 First, install the required dependencies using npm:
 
@@ -339,10 +375,11 @@ First, install the required dependencies using npm:
     - **@azure/cosmos**: Cosmos DB client.
     - **tedious**: SQL Server (Azure SQL) client for Node.js.
     - **bootstrap**: Frontend styling framework.
-    
 
-    
-1. You'll need to configure the connection for the Azure SQL Database. Here’s a basic setup using the tedious package. Create a file called dbconfig.js for the SQL configuration:
+1. You'll need to configure the connection for the **Azure SQL Database**. Here’s a basic setup using the tedious package. Create a file called **dbconfig.js** for the SQL configuration, Ensure to replace **`<URI>`** with the **SQL Server name**.
+
+    - **User name**: `sqladmin`
+    - **Password**: `X5FsphLufmY6xHFHaGUR`
 
     ```
     const { Connection, Request } = require('tedious');
@@ -408,11 +445,15 @@ First, install the required dependencies using npm:
 
     
     ```
-    
 
+1. Here is the main **app.js** file with three routes and lazy loading using Bootstrap tabs:
 
+1. Replace the following placeholders with your actual Cosmos DB configuration:
 
-1. Here is the main app.js file with three routes and lazy loading using Bootstrap tabs:
+    - your-cosmosdb-url
+    - your-cosmosdb-primary-key
+    - your-database-name
+    - your-container-name
 
     ```
     const express = require('express');
@@ -491,14 +532,10 @@ First, install the required dependencies using npm:
         console.log(`App running on http://localhost:${port}`);
     });
     ```
-1. In the above code, replace the following placeholders with your actual Cosmos DB configuration:
 
-    - your-cosmosdb-url
-    - your-cosmosdb-primary-key
-    - your-database-name
-    - your-container-name
+1. Create a new folder named **public** inside the **inventory** folder.
 
-1. In the public directory, create an index.html file with the Bootstrap tab navigation and lazy loading functionality.
+1. In the public directory, create an **index.html** file with the Bootstrap tab navigation and lazy loading functionality.
 
     ```
     <!DOCTYPE html>
@@ -664,13 +701,17 @@ First, install the required dependencies using npm:
     ├── package-lock.json  # npm lock file
     └── node_modules/      # (generated after npm install)
     ```
-    
+
+   ![](images/inventoryfolder.png)
+
 1. To run the application, use the following command:
 
     ```
     node app.js
     ```
-    
+
+   ![](images/app.png)
+
 1. Once the app is running, open a web browser and go to [http://localhost:3000](http://localhost:3000). You should see the data from Cosmos DB displayed in an HTML list format.
 
     ![Cosmosdata](images/Cosmosdata.png)
