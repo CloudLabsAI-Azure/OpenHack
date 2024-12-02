@@ -32,3 +32,7 @@ Demonstrate to the coach of a working Search experience using the generated docu
 - https://learn.microsoft.com/en-us/azure/ai-studio/how-to/index-add
 - [How to add and manage data in your Azure AI Studio project](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/data-add)
 - [How to build and consume vector indexes in Azure AI Studio](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/index-add)
+
+## Conclusion
+
+This challenge will help you understand and apply the Retrieval-Augmented Generation (RAG) pattern, combining document generation, data transformation, and cognitive services. By extracting structured data from unstructured documents, you’ll enhance the usability of business-critical information for better decision-making.

@@ -29,3 +29,7 @@ There are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/
 
 ## Resources
 - [Create a custom Image Analysis model](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/model-customization?tabs=studio)
+
+## Conclusion
+
+Completing this challenge will enable you to integrate computer vision capabilities into applications using Azure Vision Studio and Machine Learning. You will learn how to develop AI-powered image search features, enhancing user experience by allowing customers to search products based on images they upload.

@@ -38,4 +38,8 @@ Connect to the SQL Server instance. After connecting look into the tables & view
 
 - https://learn.microsoft.com/en-us/azure/azure-sql/database/connect-query-ssms?view=azuresql
 
+## Conclusion
+
+By completing this challenge, you will have gained hands-on experience in restoring and managing SQL Server databases in Azure, querying data effectively, and using views to derive meaningful insights. This foundation will help you analyze and solve real-world business challenges using Azure’s data services.
+
 

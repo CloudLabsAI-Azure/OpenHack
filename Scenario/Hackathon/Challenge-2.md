@@ -86,6 +86,8 @@ Demonstrate to the coach that you are able to provide a sample json segment to s
 - https://learn.microsoft.com/en-us/azure/machine-learning/how-to-run-jupyter-notebooks?view=azureml-api-2
 - [Explore classification with Azure Machine Learning Designer](https://microsoftlearning.github.io/AI-900-AIFundamentals/instructions/02b-create-classification-model.html)
 
+## Conclusion
 
+This challenge will help you build and deploy machine learning models within Azure, empowering you to detect data quality issues. You will have gained valuable experience in creating datasets, transforming data, and deploying models to production, equipping you with skills for real-world AI applications in data analysis.
 
 
