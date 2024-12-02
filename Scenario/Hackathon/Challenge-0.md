@@ -17,3 +17,5 @@ Please ensure your machine conforms to these prerequisites:
 
 - Each Challenge will have different services that need to be deployed
 
+### Click on Next from the lower right corner to proceed with the challenges.
+
