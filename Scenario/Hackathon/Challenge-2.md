@@ -1,5 +1,7 @@
 # Challenge 2 - Use Machine Learning to Expose Data Issues
 
+### Estimated Duration: 120 minutes
+
 ## Background story
 
 Now that you have had a chance to explore the data now lets use Machine Learning to figure which portion of the data is creating the underlying issues. For this type of data issue we have chosen to use classification model. 
