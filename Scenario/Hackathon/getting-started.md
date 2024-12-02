@@ -1,5 +1,7 @@
 # Mircosoft Azure OpenHack - Hackathon
 
+### Overall Estimated Duration: 8 hours
+
 ## Introduction
 
 This hackathon is designed to immerse you in the world of Azure cloud services, machine learning, AI, and data management. Throughout the hackathon, you will tackle real-world challenges faced by Woodgrove Retail, a hypothetical company, by utilizing a wide array of Azure tools and technologies. The challenges span across SQL Server management, machine learning model development, AI-powered image search, document processing using the RAG pattern, and advanced data retrieval techniques.
