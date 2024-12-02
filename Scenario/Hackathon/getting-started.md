@@ -8,14 +8,14 @@ This hackathon is designed to immerse you in the world of Azure cloud services, 
 
 By participating, you’ll gain practical experience in building AI-driven solutions, deploying machine learning models, enhancing customer interaction, and improving operational efficiency. Whether you're working with Azure's data services or integrating cutting-edge AI capabilities, this hackathon offers an excellent opportunity to refine your skills and contribute to innovative business solutions.
 
-## Learning Objectives
+## Hackathon Objectives
 
 By participating in this hackathon, you will:
 
-- Learn to use Azure data services like SQL Server and Azure Machine Learning to restore and analyze data. You will also create
+- Gain Practical Experience with Azure Data Services and Machine Learning to restore and analyze data. You will also create machine learning pipelines to detect and address data issues.
 - Integrate Azure Vision Studio and Machine Learning to build AI models for image recognition. Learn how to develop applications that allow users to search for products based on images.
 - Build and transform data pipelines in Azure Machine Learning, train machine learning models, and deploy them to detect data issues, enhancing data-driven business solutions.
-- Learn to apply the Retrieval-Augmented Generation (RAG) pattern to generate and process documents, and use Azure Cognitive Services to extract structured data from unstructured formats like PDFs.
+- Apply the Retrieval-Augmented Generation (RAG) pattern to generate and process documents and use Azure Cognitive Services to extract structured data from unstructured formats like PDFs.
 - Develop advanced search capabilities using the RAG pattern and create Node.js applications that enhance data retrieval and improve systems like inventory management.
 
 ## Hackathon Format: Challenge Based
@@ -24,10 +24,12 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 
 - Analyzing the problem statement.
 - Strategizing your approach to find the most effective solution.
-- Leveraging the provided lab environment and Azure AI services.
+- Leveraging the provided hackathon environment and Azure AI services.
 - Collaborating with peers to refine and implement your solutions.
 
 ## Challenges Overview
+
+- **Challenge 0 - Development environment configuration:** Ensure that you have the reruired prerequites needed before diving into the challenges. The required softwares are already pre-installed in your hackthon environment, which are, Visual Studio Code, SQL Server Management Studio (SSMS), Pandoc v3.5, Python v3.10.11, Nodejs v18.16.1 and .NET core v8.0.
 
 - **Challenge 1 - Restore a SQL Server Backup and Query the Data:** Participants need to restore a SQL Server backup and query the data using SQL Server Management Studio in Azure. The objective is to analyze the data through views or custom queries to uncover insights and solve business challenges facing the company.
 
@@ -43,25 +45,25 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 
 Welcome to your Mircosoft Azure OpenHack - Hackathon! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
  
-## Accessing Your Lab Environment
+## Accessing Your Hackathon Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and hackathon guide will be right at your fingertips within your web browser.
 
   ![](images/labguide01.png)
 
-### Virtual Machine & Lab Guide
+### Virtual Machine & Hackathon Guide
  
-Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+Your virtual machine is your workhorse throughout the workshop. The hackathon guide is your roadmap to success.
  
-## Exploring Your Lab Resources
+## Exploring Your Hackathon Resources
  
-To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
+To get a better understanding of your hackathon resources and credentials, navigate to the **Environment** tab.
  
 ![](images/env-01.png)
  
 ## Utilizing the Split Window Feature
  
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
+For convenience, you can open the hackathon guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
 ![](images/split-01.png)
  
@@ -97,7 +99,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
      
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the hackathon.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
    
