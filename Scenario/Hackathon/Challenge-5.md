@@ -1,5 +1,7 @@
 # Challenge 5 - Advanced Retrieval Augmented Generation (RAG) Pattern
 
+### Estimated Duration: 120 minutes
+
 ## Background story
 
 So far many of the technologies and techniques provide value but none are really providing deep analytics and search results that provide the power to make decisions quickly. 

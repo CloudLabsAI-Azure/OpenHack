@@ -1,5 +1,7 @@
 # Challenge 3 - Search Based on Images
 
+### Estimated Duration: 90 minutes
+
 ## Background story
 
 Now that you have a database to find the potential issues facing the Woodgrove Retail the next step is to build a AI service to add additional functionality. The goal of the feature should be to allow for searching and finding products available by uploading a picture a potential customer finds to see if this item is potentially available.
