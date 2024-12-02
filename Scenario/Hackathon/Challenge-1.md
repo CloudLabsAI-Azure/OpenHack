@@ -1,5 +1,7 @@
 # Challenge 1 - Restore a SQL Server Backup and Query the Data
 
+### Estimated Duration: 60 minutes
+
 ## Background story
 
 Woodgrove Retail has running an online retail website for several years and we have access to some archived data. Woodgrove This retailer  is a Internet-based mail order business (B2C business) thats located in Germany and also located in a rural area including storage space (which can be adapted if necessary and with some lead time). There is a small, motivated team, which can be supplemented by auxiliary staff if required.
