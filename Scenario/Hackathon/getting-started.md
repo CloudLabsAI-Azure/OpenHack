@@ -45,7 +45,7 @@ Welcome to your Mircosoft Azure OpenHack - Hackathon! We've prepared a seamless 
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-  ![](images/lab-guide-01.png)
+  ![](images/labguide01.png)
 
 ### Virtual Machine & Lab Guide
  
