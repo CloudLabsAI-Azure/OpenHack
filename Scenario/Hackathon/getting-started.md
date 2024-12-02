@@ -1,10 +1,41 @@
 # Mircosoft Azure OpenHack - Hackathon
 
+## Introduction
+
+This hackathon is designed to immerse you in the world of Azure cloud services, machine learning, AI, and data management. Throughout the hackathon, you will tackle real-world challenges faced by Woodgrove Retail, a hypothetical company, by utilizing a wide array of Azure tools and technologies. The challenges span across SQL Server management, machine learning model development, AI-powered image search, document processing using the RAG pattern, and advanced data retrieval techniques.
+
+By participating, you’ll gain practical experience in building AI-driven solutions, deploying machine learning models, enhancing customer interaction, and improving operational efficiency. Whether you're working with Azure's data services or integrating cutting-edge AI capabilities, this hackathon offers an excellent opportunity to refine your skills and contribute to innovative business solutions.
+
 ## Learning Objectives
+
+By participating in this hackathon, you will:
+
+- Learn to use Azure data services like SQL Server and Azure Machine Learning to restore and analyze data. You will also create
+- Integrate Azure Vision Studio and Machine Learning to build AI models for image recognition. Learn how to develop applications that allow users to search for products based on images.
+- Build and transform data pipelines in Azure Machine Learning, train machine learning models, and deploy them to detect data issues, enhancing data-driven business solutions.
+- Learn to apply the Retrieval-Augmented Generation (RAG) pattern to generate and process documents, and use Azure Cognitive Services to extract structured data from unstructured formats like PDFs.
+- Develop advanced search capabilities using the RAG pattern and create Node.js applications that enhance data retrieval and improve systems like inventory management.
 
 ## Hackathon Format: Challenge Based
 
+This hackathon adopts a challenge-based format, offering you a unique opportunity to learn while dealing with practical problems. Each challenge includes one or more self-contained tasks designed to test and enhance your skills in specific aspects of Azure OpenAI services. You will approach these challenges by:
+
+- Analyzing the problem statement.
+- Strategizing your approach to find the most effective solution.
+- Leveraging the provided lab environment and Azure AI services.
+- Collaborating with peers to refine and implement your solutions.
+
 ## Challenges Overview
+
+- **Challenge 1 - Restore a SQL Server Backup and Query the Data:** Participants need to restore a SQL Server backup and query the data using SQL Server Management Studio in Azure. The objective is to analyze the data through views or custom queries to uncover insights and solve business challenges facing the company.
+
+- **Challenge 2 - Use Machine Learning to Expose Data Issues:** This challenge requires participants to set up an Azure Machine Learning compute environment, create datasets, and build a pipeline to transform the data. After running the pipeline, participants will train a machine learning model, deploy it as a service, and test it to detect data issues.
+
+- **Challenge 3 - Search Based on Images:** The goal is to create an AI service using Azure Vision Studio and Azure Machine Learning to allow customers to upload images and find similar products in the database. This challenge focuses on image tagging and model creation to match uploaded images with available products.
+
+- **Challenge 4 - RAG Pattern:** Participants will use the Retrieval-Augmented Generation (RAG) pattern to process data from SQL Server and images. They will generate PDFs from this data and upload them to Azure Blob Storage. Using Azure Cognitive Services, they will extract and enhance data from the PDFs, including article numbers, categories, and related images.
+
+- **Challenge 5 - Advanced Retrieval-Augmented Generation (RAG) Pattern:** In this challenge, participants will export data from SQL Server to a CSV file and build an inventory application using Node.js. The focus is on implementing an advanced RAG pattern to enhance data retrieval and search capabilities in the application, improving overall inventory management.
 
 ## Getting started with the Hackathon
 
