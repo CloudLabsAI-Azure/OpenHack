@@ -39,7 +39,7 @@ Here is a description of the data
 
    ![](images/import-app-intro.png)
 
-1. On the **Import settings** tab, click on **Browse** and search for and select the **AzureAIHack.bacpac** file and click on **Next**.
+1. On the **Import settings** tab, click on **Browse** and search for and select the **AzureAIHack.bacpac** file from **C:\LabFiles** folder and click on **Next**.
 
    ![](images/import-app-browse.png)
 
@@ -71,7 +71,6 @@ Here is a description of the data
                              dbo.Customer ON dbo.Orders.CustomerNumber = dbo.Customer.CustomerNumber INNER JOIN
                              dbo.Supplier ON dbo.Orders.SupplierNumber = dbo.Supplier.SupplierNo
     ```
-
 
 1. Starting from that sample query its possible to modify it to get just the important columns and also the pertinent data with the following query:
 
