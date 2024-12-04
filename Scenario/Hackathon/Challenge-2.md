@@ -12,7 +12,7 @@ Create the following:
 
 - Create compute
 - Create a dataset
-- Create a pipeline in Designer and load data to canvas
+- Create a pipeline in Designer and load data to the canvas
 - Add transformations
 - Run the pipeline
 - View the transformed data
