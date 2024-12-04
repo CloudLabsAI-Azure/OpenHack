@@ -3,7 +3,7 @@
 Please ensure your machine conforms to these prerequisites:
 
 - A modern laptop running Windows 10, Mac OSX 10.12, or higher.
-- Preferably with at least 2 monitors.
+- At least 2 monitors (optional).
 
 - Your preferred IDE (Integrated Development Environment) for exploring the Contoso Video web app or data generator projects, such as [Visual Studio Code](https://code.visualstudio.com/) or [Visual Studio](https://visualstudio.microsoft.com/).
 - [MS SQL Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
