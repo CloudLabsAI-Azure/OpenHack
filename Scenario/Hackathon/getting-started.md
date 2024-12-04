@@ -1,24 +1,24 @@
-# Mircosoft Azure OpenHack - Hackathon
+# Microsoft Azure OpenHack - Hackathon
 
 ### Overall Estimated Duration: 8 hours
 
 ## Introduction
 
-This hackathon is designed to immerse you in the world of Azure cloud services, machine learning, AI, and data management. Throughout the hackathon, you will tackle real-world challenges faced by Woodgrove Retail, a hypothetical company, by utilizing a wide array of Azure tools and technologies. The challenges span across SQL Server management, machine learning model development, AI-powered image search, document processing using the RAG pattern, and advanced data retrieval techniques.
+This hackathon is designed to immerse you in the world of Azure cloud services, machine learning, AI, and data management. Throughout the hackathon, you will tackle real-world challenges faced by Woodgrove Retail, a hypothetical company, by utilizing a wide array of Azure tools and technologies. The challenges span across SQL server management, machine learning model development, AI-powered image search, document processing using the RAG pattern, and advanced data retrieval techniques.
 
-By participating, you’ll gain practical experience in building AI-driven solutions, deploying machine learning models, enhancing customer interaction, and improving operational efficiency. Whether you're working with Azure's data services or integrating cutting-edge AI capabilities, this hackathon offers an excellent opportunity to refine your skills and contribute to innovative business solutions.
+By participating, you will gain practical experience in building AI-driven solutions, deploying machine learning models, enhancing customer interaction, and improving operational efficiency. Whether you are working with Azure's data services or integrating cutting-edge AI capabilities, this hackathon offers an excellent opportunity to refine your skills and contribute to innovative business solutions.
 
 ## Hackathon Objectives
 
 By participating in this hackathon, you will:
 
-- Gain Practical Experience with Azure Data Services and Machine Learning to restore and analyze data. You will also create machine learning pipelines to detect and address data issues.
+- Gain practical experience with Azure Data Service and Machine Learning to restore and analyze data. You will also create machine learning pipelines to detect and address data issues.
 - Integrate Azure Vision Studio and Machine Learning to build AI models for image recognition. Learn how to develop applications that allow users to search for products based on images.
 - Build and transform data pipelines in Azure Machine Learning, train machine learning models, and deploy them to detect data issues, enhancing data-driven business solutions.
 - Apply the Retrieval-Augmented Generation (RAG) pattern to generate and process documents and use Azure Cognitive Services to extract structured data from unstructured formats like PDFs.
 - Develop advanced search capabilities using the RAG pattern and create Node.js applications that enhance data retrieval and improve systems like inventory management.
 
-## Hackathon Format: Challenge Based
+## Hackathon Format: Challenge-Based
 
 This hackathon adopts a challenge-based format, offering you a unique opportunity to learn while dealing with practical problems. Each challenge includes one or more self-contained tasks designed to test and enhance your skills in specific aspects of Azure OpenAI services. You will approach these challenges by:
 
@@ -29,9 +29,9 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 
 ## Challenges Overview
 
-- **Challenge 0 - Development environment configuration:** Ensure that you have the reruired prerequites needed before diving into the challenges. The required softwares are already pre-installed in your hackthon environment, which are, Visual Studio Code, SQL Server Management Studio (SSMS), Pandoc v3.5, Python v3.10.11, Nodejs v18.16.1 and .NET core v8.0.
+- **Challenge 0 - Development environment configuration:** Ensure that you have the required prerequisites before diving into the challenges. The required software is already pre-installed in your hackathon environment: Visual Studio Code, SQL Server Management Studio (SSMS), Pandoc v3.5, Python v3.10.11, Node.js v18.16.1, and .NET Core v8.0.
 
-- **Challenge 1 - Restore a SQL Server Backup and Query the Data:** Participants need to restore a SQL Server backup and query the data using SQL Server Management Studio in Azure. The objective is to analyze the data through views or custom queries to uncover insights and solve business challenges facing the company.
+- **Challenge 1 - Restore an SQL Server Backup and Query the Data:** Participants need to restore an SQL Server backup and query the data using SQL Server Management Studio in Azure. The objective is to analyze the data through views or custom queries to uncover insights and solve business challenges facing the company.
 
 - **Challenge 2 - Use Machine Learning to Expose Data Issues:** This challenge requires participants to set up an Azure Machine Learning compute environment, create datasets, and build a pipeline to transform the data. After running the pipeline, participants will train a machine learning model, deploy it as a service, and test it to detect data issues.
 
@@ -43,11 +43,11 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 
 ## Getting started with the Hackathon
 
-Welcome to your Mircosoft Azure OpenHack - Hackathon! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+Welcome to your Microsoft Azure OpenHack - Hackathon! We have prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
  
 ## Accessing Your Hackathon Environment
  
-Once you're ready to dive in, your virtual machine and hackathon guide will be right at your fingertips within your web browser.
+Once you are ready to dive in, your virtual machine and hackathon guide will be right at your fingertips within your web browser.
 
   ![](images/labguide01.png)
 
@@ -63,49 +63,49 @@ To get a better understanding of your hackathon resources and credentials, navig
  
 ## Utilizing the Split Window Feature
  
-For convenience, you can open the hackathon guide in a separate window by selecting the **Split Window** button from the Top right corner.
+For convenience, you can open the hackathon guide in a separate window by selecting the **Split Window** button from the top right corner.
  
 ![](images/split-01.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **start, stop, or restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
 ![](images/resourses.png)
 
-## Let's Get Started with Azure Portal
+## Let's Get Started with the Azure Portal
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
    ![](images/azure-portal-edge.png)
 
-1. On the **Sign in to Microsoft Azure** tab you will see the login screen, in that enter the following email/username, and click on **Next**. 
+1. On the **Sign in to continue to Microsoft Azure** tab, you will see the login screen. In that, enter the following email/username and click on **Next**. 
 
    * **Email/Username**: <inject key="AzureAdUserEmail"></inject>
    
      ![](images/user-email.png "Enter Email")
      
-1. Now enter the following password and click on **Sign in**.
+1. Now, enter the following password and click on **Sign in**.
    
    * **Password**: <inject key="AzureAdUserPassword"></inject>
    
      ![](images/user-pass.png "Enter Password")
 
-1. If you see the pop-up Action Required, click **Ask Later**.
+1. If you see the pop-up **Action Required**, click on **Ask later**.
 
    ![](images/asklater.png)
 
-   >**NOTE:** Do not enable MFA, select **Ask Later**.
+   >**NOTE:** Do not enable MFA. Select **Ask Later**.
      
-1. If you see the pop-up **Stay Signed in?**, select **No**.
+1. If you see the pop-up **Stay Signed in?** Select **No**.
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the hackathon.
+1. If you see the pop-up, **You have free Azure Advisor recommendations!** Close the window to continue the hackathon.
 
-1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, select **Maybe Later** to skip the tour.
    
 ## Support Contact
  
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for learners and instructors, ensuring that all your needs are efficiently addressed.
 
 Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
