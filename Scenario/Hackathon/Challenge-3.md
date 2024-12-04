@@ -4,11 +4,11 @@
 
 ## Background Story
 
-Now that you have a database to find the potential issues faced by Woodgrove Retail, the next step is to build an AI service and add additional functionality. The goal of the feature should be to allow 'search and find' of products available. It can be done by uploading a picture found by a potential customer to see if this item is available.
+Now that you have a database to find potential issues faced by Woodgrove Retail, the next step is to build an AI service and add additional functionalities. The goal of the feature should be to allow 'search and find' of products available. It can be done by uploading a picture found by a potential customer to see if the same item is available.
 
 ## Technical Details
 
-Using Vision Studio and Azure Machine Learning, you will be tagging a few dozen images and will build a service to potentially repurpose the images on the website.  
+Using Vision Studio and Azure Machine Learning, you will be tagging a few dozen images and will be building a service to repurpose the images on the website potentially.  
 There are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/images.zip) to start with.
 
 | Product | Related Image Sample |
@@ -25,7 +25,7 @@ There are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/
 
 ## Success Criteria
 
-- Once the model is trained, you should click on the **Try it out** link, upload some of the sample images, and validate if the results are appropriate.
+- Once the model is trained, you should click on the **'Try it out'** link, upload some of the sample images, and validate if the results are appropriate.
 
 ![testimages](images/testimages.png)
 
