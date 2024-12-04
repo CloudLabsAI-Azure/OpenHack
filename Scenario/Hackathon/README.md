@@ -4,7 +4,7 @@
     * Implement an AI-driven system that predicts inventory needs based on historical data, seasonal trends, and real-time sales. Use Azure OpenAI for predictive modeling and Azure AI Search to provide fast, relevant search results for inventory queries.
 * **Customer Engagement:**
     * Develop a personalized customer engagement system that uses Azure Vision to recognize products in customer-uploaded images and Azure Speech to facilitate voice-based queries and support.
-    * Create a chatbot using Azure OpenAI and integrate Semantic Kernel to enable more sophisticated and context-aware interactions with customers. The Semantic Kernel will help in understanding and processing customer inputs, generating relevant responses, and maintaining conversation context.
+    * Create a chatbot using Azure OpenAI and integrate Semantic Kernel to enable more sophisticated and context-aware interactions with customers. Semantic Kernel will help in understanding and processing customer inputs, generating relevant responses, and maintaining conversation context.
 * **Deployment and Scalability:**
     * Host the enhanced application using Azure App Service for easy deployment and scaling. Use PromptFlow to manage the different AI models used in the platform, ensuring they are properly integrated and optimized for performance.
 * **Data Management:**
