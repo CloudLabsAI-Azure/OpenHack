@@ -1,31 +1,31 @@
 # Challenge 3 - Search Based on Images
 
-### Estimated Duration: 90 minutes
+### Estimated Duration: 90 Minutes
 
-## Background story
+## Background Story
 
-Now that you have a database to find the potential issues facing the Woodgrove Retail the next step is to build a AI service to add additional functionality. The goal of the feature should be to allow for searching and finding products available by uploading a picture a potential customer finds to see if this item is potentially available.
+Now that you have a database to find potential issues faced by Woodgrove Retail, the next step is to build an AI service and add additional functionalities. The goal of the feature should be to allow 'search and find' of products available. It can be done by uploading a picture found by a potential customer to see if the same item is available.
 
-## Technical details
+## Technical Details
 
-Using Vision Studio and Azure Machine Learning you will be tagging a few dozen images to build out an service to potentially re-purpose on the website.  
+Using Vision Studio and Azure Machine Learning, you will be tagging a few dozen images and will be building a service to repurpose the images on the website potentially.  
 There are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/images.zip) to start with.
 
-| Product | Related image sample |
+| Product | Related Image Sample |
 |---------|----------------------|
-|Accessoires|![Accessoires](images/Accessoires.png) |
-|Bedclothes|![Bedclothes](images/Bedclothes.png)|
+|Accessories|![Accessoires](images/Accessoires.png) |
+|Night Dress|![Bedclothes](images/Bedclothes.png)|
 |Coffee Mug|![Coffee Mug](images/CoffeeMug.png)|
 |Gimmick|![Gimmick](images/Gimmick.png)|
 |Hoodie|![Hoodie](images/Hoodie.png)|
-|Rubber boots|![Rubber boots](images/Rubberboots.png)|
+|Rubber Boots|![Rubber boots](images/Rubberboots.png)|
 |Sweater|![Sweater](images/Sweater.png)|
-|T-Shirt long|![T-Shirt long](images/T-Shirtlong.png)|
-|tshirt|![tshirt](images/T-Shirtshort.png)|
+|T-Shirt Long|![T-Shirt long](images/T-Shirtlong.png)|
+|T-Shirt Short|![tshirt](images/T-Shirtshort.png)|
 
 ## Success Criteria
 
-- Once the model is trained you should click on the **Try it out** link and upload some of the sample images and validate that it results in an appropriate response.
+- Once the model is trained, you should click on the **'Try it out'** link, upload some of the sample images, and validate if the results are appropriate.
 
 ![testimages](images/testimages.png)
 
@@ -34,4 +34,4 @@ There are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/
 
 ## Conclusion
 
-Completing this challenge will enable you to integrate computer vision capabilities into applications using Azure Vision Studio and Machine Learning. You will learn how to develop AI-powered image search features, enhancing user experience by allowing customers to search products based on images they upload.
+Completing this challenge will enable you to integrate computer vision capabilities into applications using Azure Vision Studio and Machine Learning. You will also learn how to develop AI-powered image search features and enhance user experience by allowing customers to search products based on images they upload.

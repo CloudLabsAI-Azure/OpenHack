@@ -1,18 +1,18 @@
 # Challenge 2 - Use Machine Learning to Expose Data Issues
 
-### Estimated Duration: 120 minutes
+### Estimated Duration: 120 Minutes
 
-## Background story
+## Background Story
 
-Now that you have had a chance to explore the data now lets use Machine Learning to figure which portion of the data is creating the underlying issues. For this type of data issue we have chosen to use classification model. 
+Now that you have had a chance to explore the data let's use machine learning to figure out which portion of the data is creating the underlying issues. For this type of data issue, we have chosen to use a classification model. 
 
-## Technical details
+## Technical Details
 
-Create the following
+Create the following:
 
 - Create compute
 - Create a dataset
-- Create a pipeline in Designer and load data to canvas
+- Create a pipeline in Designer and load data to the canvas
 - Add transformations
 - Run the pipeline
 - View the transformed data
@@ -24,7 +24,7 @@ Create the following
 
 ## Success Criteria
 
-Demonstrate to the coach that you are able to provide a sample json segment to show that it will properly predict either 0 or 1 based off the new service.
+Demonstrate to the coach that you are able to provide a sample JSON segment, showing that it will properly predict either 0 or 1 based on the new service.
 
 **Negative Return Prediction** 
 
@@ -90,6 +90,6 @@ Demonstrate to the coach that you are able to provide a sample json segment to s
 
 ## Conclusion
 
-This challenge will help you build and deploy machine learning models within Azure, empowering you to detect data quality issues. You will have gained valuable experience in creating datasets, transforming data, and deploying models to production, equipping you with skills for real-world AI applications in data analysis.
+This challenge will help you build and deploy machine learning models within Azure, empowering you to detect data quality issues. By the end, you will gain valuable experience in creating datasets, transforming data, and deploying models to production. Overall, this will equip you with skills for real-world AI applications in data analysis.
 
 

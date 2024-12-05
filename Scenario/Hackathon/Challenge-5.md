@@ -1,14 +1,14 @@
 # Challenge 5 - Advanced Retrieval Augmented Generation (RAG) Pattern
 
-### Estimated Duration: 120 minutes
+### Estimated Duration: 120 Minutes
 
-## Background story
+## Background Story
 
-So far many of the technologies and techniques provide value but none are really providing deep analytics and search results that provide the power to make decisions quickly. 
+So far, many of the technologies and techniques provide value but none are really providing deep analytics and search results that provide the power to make decisions quickly. 
 
-## Technical details
+## Technical Details
 
-1. From SQL Server export out a csv file from the following query:
+1. From the SQL Server, export out a CSV file based on the following Query:
    
     ```
     WITH RankedData AS (
@@ -32,26 +32,26 @@ So far many of the technologies and techniques provide value but none are really
         row_num <= total_rows * 0.99;  -- Filtering for the top 30%
     ```
 
-1. You will be ingesting a csv file into blob storage and then creating a vector search with an embedding model.
+1. You will be ingesting a CSV file into Blob Storage and then creating a vector search with an embedding model.
 
-1. From the newly created index you will execute a prompt to generate a csv file of potential inventory needed.
+1. From the newly created index, you will execute a prompt to generate a CSV file of the potential inventory needed.
 
-1. Then you will import that csv into a Cosmos DB.
+1. Then, you will import that CSV into a Cosmos DB.
 
-1. Here is a pre-built [Jupyter Notebook](https://openhackguides.blob.core.windows.net/ai-openhack/importtoCosmos.ipynb) to import the data
+1. Here is a pre-built [Jupyter Notebook](https://openhackguides.blob.core.windows.net/ai-openhack/importtoCosmos.ipynb) to import the data.
 
-1. Run the following before running the sample script
+1. Run the following before running the sample script:
 
     ```
     pip install azure-cosmos pandas
     
     ```
 
-1. Finally you will spin up a simple website to expose the inventory from Cosmos DB and also from SQL Server.
+1. Finally, you will spin up a simple website to expose the inventory from Cosmos DB and also from SQL Server.
 
 ### Setup Inventory Application
 
-1. Create a new folder from the command line and initialize the application
+1. Create a new folder from the command line and initialize the application.
    
     ```
     npm init -y
@@ -72,7 +72,7 @@ So far many of the technologies and techniques provide value but none are really
     
 
     
-1. You'll need to configure the connection for the Azure SQL Database. Here’s a basic setup using the tedious package. Create a file called dbconfig.js for the SQL configuration:
+1. You will need to configure the connection for the Azure SQL Database. Here is a basic setup using the tedious package. Create a file called dbconfig.js for the SQL configuration:
 
     ```
     const { Connection, Request } = require('tedious');
@@ -404,25 +404,25 @@ So far many of the technologies and techniques provide value but none are really
 
     ![Cosmosdata](images/Cosmosdata.png)
     
-1. The second tab will provide the first 15 rows of data from SQL Server
+1. The second tab will provide the first 15 rows of data from the SQL Server.
 
     ![sqldata](images/sqldata.png)
 
 ## Success Criteria
 
-1. Demonstrate the ability to generate the sample csv file from the vector index.
+1. Demonstrate the ability to generate the sample CSV file from the vector index.
 1. Demonstrate the sample website that shows the Cosmos DB data and SQL Server data.
 
 ## Resources
 
-- [How to Export Data From Microsoft SQL Server to a CSV File](https://learnsql.com/blog/export-csv-file-ms-sql-server/)
-- [How to add and manage data in your Azure AI Studio project](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/data-add#create-data-file-type)
-- [How to build and consume vector indexes in Azure AI Studio](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/index-add?source=recommendations)
-- [Bulk import data to Azure Cosmos DB for NoSQL account by using the .NET SDK](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/tutorial-dotnet-bulk-import)
-- [Create a new Node.js project and work with dependencies](https://learn.microsoft.com/en-us/training/modules/create-nodejs-project-dependencies/)
-- [Quickstart: Azure Cosmos DB for NoSQL library for Node.js](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-nodejs?tabs=javascript&pivots=devcontainer-codespace)
-- [Step 3: Proof of concept connecting to SQL using Node.js](https://learn.microsoft.com/en-us/sql/connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js?view=sql-server-ver16)
+- [How to export data from a Microsoft SQL Server to a CSV file?](https://learnsql.com/blog/export-csv-file-ms-sql-server/)
+- [How to add and manage data in your Azure AI Studio project?](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/data-add#create-data-file-type)
+- [How to build and consume vector indexes in Azure AI Studio?](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/index-add?source=recommendations)
+- [Bulk import data to Azure Cosmos DB for NoSQL accounts by using the .NET SDK.](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/tutorial-dotnet-bulk-import)
+- [Create a new Node.js project and work with dependencies.](https://learn.microsoft.com/en-us/training/modules/create-nodejs-project-dependencies/)
+- [Quickstart: Azure Cosmos DB for NoSQL library for Node.js.](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-nodejs?tabs=javascript&pivots=devcontainer-codespace)
+- [Step 3: Proof of concept connecting to SQL using Node.js.](https://learn.microsoft.com/en-us/sql/connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js?view=sql-server-ver16)
 
 ## Conclusion
 
-Through this challenge, you will gain advanced skills in implementing the RAG pattern for enhanced data retrieval and search. By developing an inventory application with Node.js and leveraging data extraction techniques, you will improve inventory management systems and optimize data retrieval processes in real-time applications.
+Through this challenge, you will gain advanced skills in implementing the RAG pattern for enhanced data retrieval and search. By developing an inventory application with Node.js and leveraging data extraction techniques, you will be able to improve inventory management systems and optimize data retrieval processes in real-time applications.
