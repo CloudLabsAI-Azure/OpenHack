@@ -49,7 +49,7 @@ Welcome to your Microsoft Azure OpenHack - Hackathon! We have prepared a seamles
  
 Once you are ready to dive in, your virtual machine and hackathon guide will be right at your fingertips within your web browser.
 
-  ![](images/labguide01.png)
+![](images/getting-started-openhack.png)
 
 ### Virtual Machine & Hackathon Guide
  
