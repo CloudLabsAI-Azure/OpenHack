@@ -21,7 +21,7 @@ There are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/
 |Rubber boots|![Rubber boots](images/Rubberboots.png)|
 |Sweater|![Sweater](images/Sweater.png)|
 |T-Shirt long|![T-Shirt long](images/T-Shirtlong.png)|
-|tshirt|![tshirt](images/T-Shirtshort.png)|
+|T-Shirt short|![tshirt](images/T-Shirtshort.png)|
 
 ## Success Criteria
 
