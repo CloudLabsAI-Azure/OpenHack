@@ -8,16 +8,16 @@
 
    ![createnewresource](images/custom_vision.png)
    
- In the Basics tab, provide the necessary details.
+1. In the Basics tab, provide the necessary details.
     
- - Create Options : Both
- - Resources Group : OpenHack
- - Region : East US
- - Name : Give the unique name
- - Traning pricing tier : Standard S0
- - Prediction pricing tier : standard S0
+   - Create Options : Both
+   - Resource Group : openhack
+   - Region : Enter the RG region
+   - Name : Give the unique name
+   - Traning pricing tier : Standard S0
+   - Prediction pricing tier : standard S0
     
- Keeping all other tabs default. Click on "Review + Create" to finalize and create it.
+1. Keeping all other tabs default. Click on "Review + Create" to finalize and create it.
 
    ![createnewresource](images/custom_vision-1.png)
    
@@ -189,11 +189,6 @@
 1. Then select individual files from the provided images and drag them in too validate. In this example I dragged a tshirt in and this is the result
 
     ![testimage](images/testimage-1.png)
-
-
-
-
-
 
     ![testimage](images/testimage-1-1.png)
 

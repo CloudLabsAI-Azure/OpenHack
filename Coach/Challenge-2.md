@@ -111,9 +111,8 @@
     ![](images/run-query.png) 
 
 1. Click **Run query**
+   
 1. Click on **Next**
-
-    ![runquery](images/runquery.png)
 
 1. In the Schema section change the following fields detected as **Decimal** to **Integer**.
    
@@ -142,8 +141,6 @@ To get started with Azure Machine Learning designer, first you must create a pip
 1. Change the draft name from Pipeline-Created-on-date to **WoodGrove Retail Training**.
 
 1. Then in the project, next to the pipeline name on the left, select the arrows icon to expand the panel if it is not already expanded. The panel should open by default to the Asset library pane, indicated by the books icon at the top of the panel. Note that there is a search bar to locate assets. Notice two buttons, Data and Component. 
-
-    ![datacomponent](images/datacomponent.png)
     
 1. Select Data. Search for and place the **inventoryissues** dataset onto the canvas.
 
@@ -160,14 +157,14 @@ To get started with Azure Machine Learning designer, first you must create a pip
 ### Add transformations
 
 1. In the Asset library pane on the left, select Component, which contains a wide range of modules you can use for data transformation and model training. You can also use the search bar to quickly locate modules.
-
-    ![component](images/component.png)
     
 1. Find the **Select Columns in Dataset** module and place it on the canvas below the inventoryissues dataset. Then connect the output from the bottom of the inventoryissues dataset to the input at the top of the Select Columns in Dataset module.
 
    ![](images/classic-pipeline-select-columns.png) 
 
 1. Double click on the Select Columns in Dataset module to access a settings pane on the right. Select Edit column. Then in the Select columns window, select **By name** and **Add all** the columns.
+
+   >**NOTE:** If you are not able to select the **By name** setting, then choose **All columns** under **With rules**. 
 
    ![](images/classic-pipeline-select-columns-edit.png)
 
@@ -182,8 +179,6 @@ To get started with Azure Machine Learning designer, first you must create a pip
     ```
     _KEY_OrderNo, _KEY_Supplier, ArticleNo, KEY_CustomerNo, F_Discounts, F_VolumeDiscount, F_StudentDiscount, F_ListPrice,F_IsReturned
     ```
-    
-    ![selectcolumns](images/selectcolumns.png)
 
    ![](images/classic-pipeline-normalize-columns.png)
 
@@ -210,8 +205,6 @@ To apply your data transformations, you need to run the pipeline as an experimen
    ![](images/classic-pipeline-in-out.png)
 
 1. On the Runtime settings page an error appears as you don´t have a default compute to run the pipeline. In the Select compute type drop-down select Compute cluster and in the Select Azure ML compute cluster drop-down select your recently created compute cluster. Leave the default value in the **Select datastore** of **workplaceblobstore**
-
-    ![blobstore](images/blobstore.png)
 
    ![](images/classic-pipeline-compute.png)
 
@@ -407,7 +400,7 @@ Now you’re ready to run the training pipeline and train the model.
             inplace=True,
         )
         return scored_results
-     ```
+    ```
 
 1. Connect the output from the **Score Model** module to the **Dataset1** (left-most) input of the **Execute Python Script**, and connect the Result dataset (left) output of the **Execute Python Script** module to the **Web Service Output**.
 
@@ -438,7 +431,8 @@ Now you’re ready to run the training pipeline and train the model.
 1. Select Deploy and wait for the web service to be deployed - this can take several minutes.
 
 ### Test the service
-    > The deployment will take a long time. Wait until in the **Deployment state** is **Healthy**
+
+The deployment will take a long time. Wait until in the **Deployment state** is **Healthy**
     
 ![deployhealthy](images/deployhealthy.png)
 
@@ -455,7 +449,7 @@ Now you’re ready to run the training pipeline and train the model.
     api_key=''
     ```
 
-1.In the Compute section create a new Compute instance selecting the **Standard_D11_v2** instance.
+1. In the Compute section create a new Compute instance selecting the **Standard_D11_v2** instance.
 1. Wait for the compute to spin up (10 15 minutes)
 1. Paste in the following sample json in the data section of the python code. 
 
