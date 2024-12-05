@@ -402,11 +402,11 @@ So far, many of the technologies and techniques provide value but none are reall
     
 1. Once the app is running, open a web browser and go to [http://localhost:3000](http://localhost:3000). You should see the data from Cosmos DB displayed in an HTML list format.
 
-    ![Cosmosdata](images/Cosmosdata.png)
+    ![Cosmosdata](images/Cosmosdata-01.png)
     
 1. The second tab will provide the first 15 rows of data from the SQL Server.
 
-    ![sqldata](images/sqldata.png)
+    ![sqldata](images/sqldata-01.png)
 
 ## Success Criteria
 

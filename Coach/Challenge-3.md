@@ -2,24 +2,23 @@
 
 ## Image Search
 
-### Create a new custom model
+### Create a new Computer Vision AI service
 
-1. Create a Custom Vision model.
+1. Create a Computer Vision AI service.
 
-   ![createnewresource](images/custom_vision.png)
+   ![](images/computer-vision.png)
    
 1. In the Basics tab, provide the necessary details.
     
-   - Create Options : Both
-   - Resource Group : openhack
-   - Region : Enter the RG region
-   - Name : Give the unique name
-   - Traning pricing tier : Standard S0
-   - Prediction pricing tier : standard S0
-    
-1. Keeping all other tabs default. Click on "Review + Create" to finalize and create it.
-
-   ![createnewresource](images/custom_vision-1.png)
+   - **Subscription** : Select the default subsciption
+   - **Resource Group** : **openhack**
+   - **Region** : **East US / West US 2**
+   - **Name** : Enter a unique name
+   - **Pricing tier** : **Standard S1**
+   - **Check the box for Responsible AI Notice**
+   - Click **Review + Create**
+  
+   ![](images/computer-vision-review-create-01.png)
    
 1. Login to the vision portal Begin by going to Vision Studio , selecting the Image analysis tab. Then select the Customize models tile.
     
@@ -31,12 +30,8 @@
 1. Click the **View all resources** .
 
    ![createnewresource](images/view_all-1.png)
-
-    ![aiservices](images/aiservices.png)
     
-    A. Click on the **Create a new reseource** link to get a popup. Give it some time to create the resource and follow the steps in **Part B**.
-    
-    B. Check the radio button next to the already and click the **Select as default resource** button 
+   - Check the radio button next to the already created **Computer Vision** service and click the **Select as default resource** button.
 
     
 1. In the breadcrumbs click on the **Vision Studio** text
@@ -52,11 +47,14 @@
     ![resourcename](images/view_all-1-2.png)
     
 ### Add a dataset
-> Note: To complete the next series of steps you need to have a **Azure Storage Service** created that has **Anonymous access** enabled. Additionally, you need a **Container** called **Images** that is also set to **Anonymous for Containers** 
+
+> **Note:** To complete the next series of steps you need to have a **Azure Storage Service** created that has **Anonymous access** enabled. Additionally, you need a **Container** called **Images** that is also set to **Anonymous for Containers**.
+
+> **Note:** The **Images** have already been uploaded to the **openhackstrgXXX** account in the container named **images** inside the **openhack** resource group.
 
 1. Upload the extract and upload the images into the newly created container.
 
-1. Click onn **Add new dataset**
+1. Click on **Add new dataset**
 
     ![newdataset](images/ad-newdataset.png)
     
