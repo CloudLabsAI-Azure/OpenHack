@@ -5,7 +5,7 @@
 ## Background Story
 To enhance the results of the products available to customers, Woodgrove Retail wants to utilize Azure OpenAI. This challenge will utilize the [RAG pattern](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview) as part of the solution. 
 
- ![ragpattern](images/ragpattern.png)
+![ragpattern](images/ch-04-rag-pattern.png)
 
 ## Technical Details
 
