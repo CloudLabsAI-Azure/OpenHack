@@ -345,11 +345,11 @@ Now you’re ready to run the training pipeline and train the model.
 
 ### Create an inference pipeline
 
-1. Locate the menu above the canvas and select **Create inference pipeline**. You may need to expand your screen to full and click on the three dots icon … on the top right hand corner of the screen in order to find **Create inference pipeline** in the menu.
+1. Locate the menu above the canvas and select **Create inference pipeline** and select **Real-time inference pipeline**. You may need to expand your screen to full and click on the three dots icon … on the top right hand corner of the screen in order to find **Create inference pipeline** in the menu.
 
-    ![inference](images/inference.png)
+    ![inference](images/create-inference-piepline.png)
     
-1. In the **Create inference pipeline** drop-down list, select **Real-time inference pipeline**. After a few seconds, a new version of your pipeline named **WoodGrove Retail Training-real time inference** will be opened.
+1. After a few seconds, a new version of your pipeline named **WoodGrove Retail Training-real time inference** will be opened.
 
 1. Rename the new pipeline to **Predict WoodGrove Retail**, and then review the new pipeline. Some of the transformations and training steps are a part of this pipeline. The trained model will be used to score the new data. The pipeline also contains a web service output to return results.
     * Add a **web service input** component for new data to be submitted.
@@ -378,29 +378,28 @@ Now you’re ready to run the training pipeline and train the model.
 1. The inference pipeline includes the **Evaluate Model** module, which isn’t useful when predicting from new data, so delete this module.
 
 1. The output from the **Score Model** module includes all of the input features and the predicted label and probability score. To limit the output to only the prediction and probability:
-    * Delete the connection between the Score Model module and the Web Service Output.
-    * Add an **Execute Python Script** module, replacing all of the default python script with the following code. Be cautious about tabs and spaces. If setup incorrectly the code will fail and cause delays in running the pipeline.:
+   * Delete the connection between the Score Model module and the Web Service Output.
+   * Add an **Execute Python Script** module, replacing all of the default python script with the following code. Be cautious about tabs and spaces. If setup incorrectly the code will fail and cause delays in running the pipeline.:
     
-    > Note: Dont forget about tabs and spaces in Python. This module will throw an error if it is incorrect.
+   > Note: Dont forget about tabs and spaces in Python. This module will throw an error if it is incorrect.
     
-    ![pythonimage](images/pythonimage.png)
+   ![pythonimage](images/pythonimage.png)
     
-    ```
-    import pandas as pd
+   ```
+   import pandas as pd
 
-
-    def azureml_main(dataframe1=None, dataframe2=None):
+   def azureml_main(dataframe1=None, dataframe2=None):
+       scored_results = dataframe1[["Scored Labels", "Scored Probabilities"]]
+       scored_results.rename(
+           columns={
+               "Scored Labels": "ReturnPrediction",
+               "Scored Probabilities": "Probability",
+           },
+           inplace=True,
+       )
     
-        scored_results = dataframe1[["Scored Labels", "Scored Probabilities"]]
-        scored_results.rename(
-            columns={
-                "Scored Labels": "ReturnPrediction",
-                "Scored Probabilities": "Probability",
-            },
-            inplace=True,
-        )
-        return scored_results
-    ```
+       return scored_results
+   ```
 
 1. Connect the output from the **Score Model** module to the **Dataset1** (left-most) input of the **Execute Python Script**, and connect the Result dataset (left) output of the **Execute Python Script** module to the **Web Service Output**.
 
@@ -418,10 +417,14 @@ Now you’re ready to run the training pipeline and train the model.
 
 1. When the pipeline has completed, select the **Execute Python Script** module. Select the **Preview data** and select **Result dataset** to see the predicted labels and probabilities for the three order observations in the input data.
 
+    ![](images/python-script-preview-data.png)
+
+    ![](images/python-script-result-dataset.png)
+
 ### Deploy a service
 1. At the top of the Predict WoodGrove Retail job window, select Deploy.
     
-    ![deploy 1](images/deploy1.png)
+    ![](images/inference-pipeline-deploy.png)
     
 1. In the Set up real-time endpoint select Deploy new real-time endpoint and use the following settings:
     * **Name**: predict-returns
