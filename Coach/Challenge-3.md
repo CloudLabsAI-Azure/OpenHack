@@ -11,14 +11,14 @@
 1. In the Basics tab, provide the necessary details.
     
    - **Subscription** : Select the default subsciption
-   - **Resource Group** : openhack
+   - **Resource Group** : **openhack**
    - **Region** : **East US / West US 2**
    - **Name** : Enter a unique name
    - **Pricing tier** : **Standard S1**
    - **Check the box for Responsible AI Notice**
    - Click **Review + Create**
   
-   ![](images/computer-vision-review-create.png)
+   ![](images/computer-vision-review-create-01.png)
    
 1. Login to the vision portal Begin by going to Vision Studio , selecting the Image analysis tab. Then select the Customize models tile.
     
@@ -30,10 +30,8 @@
 1. Click the **View all resources** .
 
    ![createnewresource](images/view_all-1.png)
-
-   ![aiservices](images/aiservices.png)
     
-   - Check the radio button next to the already and click the **Select as default resource** button 
+   - Check the radio button next to the already created **Computer Vision** service and click the **Select as default resource** button.
 
     
 1. In the breadcrumbs click on the **Vision Studio** text
@@ -56,7 +54,7 @@
 
 1. Upload the extract and upload the images into the newly created container.
 
-1. Click onn **Add new dataset**
+1. Click on **Add new dataset**
 
     ![newdataset](images/ad-newdataset.png)
     
