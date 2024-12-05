@@ -14,14 +14,14 @@ There are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/
 | Product | Related Image Sample |
 |---------|----------------------|
 |Accessories|![Accessoires](images/Accessoires.png) |
-|Night Dress|![Bedclothes](images/Bedclothes.png)|
+|Bedclothes|![Bedclothes](images/Bedclothes.png)|
 |Coffee Mug|![Coffee Mug](images/CoffeeMug.png)|
 |Gimmick|![Gimmick](images/Gimmick.png)|
 |Hoodie|![Hoodie](images/Hoodie.png)|
-|Rubber Boots|![Rubber boots](images/Rubberboots.png)|
+|Rubber boots|![Rubber boots](images/Rubberboots.png)|
 |Sweater|![Sweater](images/Sweater.png)|
-|T-Shirt Long|![T-Shirt long](images/T-Shirtlong.png)|
-|T-Shirt Short|![tshirt](images/T-Shirtshort.png)|
+|T-Shirt long|![T-Shirt long](images/T-Shirtlong.png)|
+|tshirt|![tshirt](images/T-Shirtshort.png)|
 
 ## Success Criteria
 
