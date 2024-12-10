@@ -32,58 +32,11 @@
 
 1. Click on **Execute** from the top toolbar and review the results once the query execution is complete.
 
-    ![exportdata2a](images/exportdata2a.png)
+   ![exportdata2a](images/exportdata2a.png)
 
-1. From the database list, locate and select your database **AzureAIHack**. Right-click on it, then navigate to **Tasks** and choose **Export Data**.
+1. After executing the query, from the **File** tab of the top left corner, select **Save Results As** and name the file as **myorders.csv** in your desired location.
 
-   ![exportdata2b](images/exportdata2b.png)
-
-1. On the **Welcome to SQL Server Import and Export Wizard** page, click **Next** to proceed.
-
-   ![welcome](images/welcome.png)
-
-2. On the **Choose a Data Source** page:  
-
-   - Set **Data source** to **Microsoft OLE DB Provider for SQL Server**.
-
-   - Enter the **Server name** as the default value.
-
-   - For **Authentication**, select **Use SQL Server Authentication** and provide the following credentials:
-
-     - **User name**: `sqladmin`
-     - **Password**: `X5FsphLufmY6xHFHaGUR`
- 
-   - Choose **Database** as `AzureAIHack` and click **Next**.
-
-     ![datasource](images/datasourcea.png)
-
-4. On the **Choose a Destination** page:
-
-   - Select **Flat File Destination** as the destination type.
-
-   - In **File name**, specify the location and file name as **C:\myorders.csv**.
-
-   - Enable the checkbox for **Unicode** to support special characters.
-
-   - Click **Next** to proceed.
-
-     ![flatfileunicodea](images/flatfileunicodea.png)
-
-1. Select a folder to export the file out to. Make sure the type of csv is selected
-
-    ![outputcsv](images/outputcsv.png)
-    
-1. Click **Next**
-
-1. Change the radio button to **Write a query to specify the data to transfer** then click **Next**
-
-   ![query](images/top30percenta.png)
-
-1. On the **Provide a Source Query** page, Paste the query that you copied earlier into the query box and then click **Next** to proceed.
-
-   ![top 30percentb](images/top30percentb.png)
-    
-1. Click **Next** to proceed through the following configuration pages, On the final page, click **Finish** to execute the SSIS job and export the data.
+   ![exportdata2a](images/exportdata-myorders.png)
 
 ### Setup a Vector Index
 
@@ -101,7 +54,7 @@
 
    ![](images/datasource2.png)
 
-1. Select the exported csv file and then click **Next**.
+1. Select the exported **myorders.csv** file and then click **Next**.
 
    ![](images/outputcsv.png)
 
@@ -218,53 +171,9 @@
     Gimmick,Toys,19,China  
     ```    
     
-<!-- ## Get the Prompt Flow available as a Web App
-1. In the **Chat Playground** select **Prompt Flow**
-
-    
-1. Start the Compute Session
-
-    ![computesession](images/computesession.png)
-
-1. Click on **Deploy**, accept the default settings and click **Review + Create**
-
-    ![deployandcreate](images/deployandcreate.png)
-    
-1. Then click **Create**
-
-1. Click the **Deployments** link in the navigation. You will notice an endpoint in addition to the model deployments
-
-    ![deployments](images/deployments.png)
-
-
-1. Populate the following fields then click **Deploy**. Take
-
-    - Name
-    - Subscription
-    - Resource Group
-    - Location
-    - Pricing plan
-    - Enable chat history = true
-
-    ![weebapp](images/weebapp.png)
-
--->
+1. The above sample csv file is already present in your lab-VM located at `C:\LabFiles\importdata.csv`.
 
 ### Add data to CosmosDB
-
-<!--1. Create a Cosmos DB and select the **Azure Cosmos DB for NoSQL** option
-
-    ![cosmos 1](images/cosmos1.png)
-    
-1. Provide a unique name and leave the default settings on the **Basics** tab
-
-    ![cosmos 2](images/cosmos2.png)
-    
-1.  On the **Backup Policy** tab make sure to select **Locally-redundant backup storage**
-
-    ![lrs](images/lrs.png)
-    
-1. Finally create the Cosmos DB by clicking the **Create** button.-->
 
 1. In the Azure portal open the pre-deployed Cosmos DB and click on **Data Explorer** and select **+ New Container**
 
@@ -330,7 +239,7 @@
     container = database.get_container_client(CONTAINER_NAME)
     
     # Read the CSV file into a DataFrame
-    csv_file_path = 'importtocosmos.csv'  # Example: './data.csv'
+    csv_file_path = 'C:\LabFiles\importdata.csv'  # Example: './data.csv'
     data = pd.read_csv(csv_file_path)
     
     # Insert data from CSV into Cosmos DB with generated IDs
