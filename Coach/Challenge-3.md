@@ -127,7 +127,7 @@
     E. To see how many images are left to apply a tag to you can view in the upper right hand corner
     F. When complete with each image click the **Submit** button.
     
-   >Note : Please repeat the same steps for all 28 images.
+   >Note : Please repeat the same steps for all 30 images.
 
     ![labeloverview](images/boots.png)
     
@@ -182,7 +182,7 @@
     
 1. In the dropdown select the newly trained model
 
-    ![newmodel](images/newmodel-1.png)
+    ![](images/newmodel-01.png)
     
 1. Then select individual files from the provided images and drag them in too validate. In this example I dragged a tshirt in and this is the result
 

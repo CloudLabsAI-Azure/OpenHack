@@ -57,6 +57,8 @@ Here is a description of the data
 
    ![](images/import-app-results.png)
 
+   >**NOTE:** If the import fails then re-perform the steps to Import the Data-tier Application.
+
 1. Once the operation completes, in the SSMS, expand **Databases > AzureAIHack > Views**, right click on **dbo.MainOrderSample**, navigate to **Script View as > SELECT To > New Query Editor Window**.
 
    ![](images/ssms-new-query-window.png)

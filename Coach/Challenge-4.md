@@ -6,69 +6,68 @@
 
 1. Login to the Azure AI portal at `https://ai.azure.com/`.
    
-2. Click on **create project** , Give an unique name to the project.
+1. Click on **Create project**.
 
    ![newdatasource](images/create-project-1.png)
 
-3. Under Create a project.
-    - Project name : Unique name
-    - Hub name : Provide an unique name.
-
-   Then click on create
+1. Under Create a project, click on **Customize**.
    
+   ![](images/create-project-customize.png)
 
-5. On the **Create a hub** pane , Provide the details as shown below:
+1. On the **Create a hub** window, provide the details as shown below:
    
     - Hub name : Leave as default
     - Subscription : Leave as default.
-    - Resource Group : choose **OpenHack** from the drop down.
+    - Resource Group : Leave as default.
     - Location : Leave default.
-    - Connect Azure AI services : Leave default.
+    - Connect Azure AI services or Azure OpenAI: Leave default.
 
     ![newdatasource](images/create_hub00.png)
     
-7. Select create new AI search , A new browser page will open , log in using your credentials.
-   
-     - Resource Group : Openhack
-     - Service name : Give a unique name.
-     - Location : **East US**.
-     - Pricing tier : Choose standard.
-     - Click on **Review + Create** and proceed with the creation.
-   
-    ![newdatasource](images/search-01.png)
-    
-    ![newdatasource](images/search-create.png)
+1. Select **Create new AI Search**, provide a unique name and select **Create**.
 
-8. Under "My Assets," select **Models + Endpoints**, then click on **Deploy a Model** and choose **Deploy a Base Model**.
+1. On the **Create a hub** window, click on **Next**.
+
+   ![](images/create_hub-next.png)
+
+1. On the **Review and finish** tab, click on **Create**.
+
+   ![](images/create_hub-create.png)
+
+1. Wait for the resources to be deployed.
+
+   ![](images/creating-hub-resources.png)
+
+1. Under "My Assets," select **Models + Endpoints**, then click on **Deploy a Model** and choose **Deploy a Base Model**.
     
     ![newdatasource](images/model+endpoints.png)
 
-9. Choose gpt-4o and click on confirm.
+1. Choose **gpt-4o** and click on confirm.
 
     ![newdatasource](images/gpt-4o.png)
 
-10. Fill in the details as shown below:
+1. Fill in the details as shown below:
     
-    - Deployment name : Gpt-4o
-    - Deployment type : Global Standard
-    - Click on customize
-    - Token's per Minute rate limit : 10k
+   - Deployment name : Gpt-4o
+   - Deployment type : Global Standard
+   - Click on customize
+   - Token's per Minute rate limit : 10k
 
-     ![newdatasource](images/deploy-1.png)
+   ![newdatasource](images/deploy-1.png)
      
-11. Click on **Playground** and then select **Try the Chat Playground** .
+1. Click on **Playground** and then select **Try the Chat Playground** .
      
-    ![newdatasource](images/playgrounds.png)
+   ![newdatasource](images/playgrounds.png)
    
 1. Click on the **Add your data** tab and then click **Add new data source**  
     
-    ![newdatasource](images/add-data.png)
+   ![newdatasource](images/add-data.png)
     
 1. On the **Data source** dropdown choose **Upload files**
 
     ![uploadfiles](images/uploadfiles-1.png)
 
-1. From the **Upload** button click the arrow and select **Upload files**
+1. From the **Upload** button click the arrow and select **Upload files**. Upload all the PDF files from `C:\LabFiles\generatedpdfs` folder.
 
     ![uploadfiules 2](images/uploadfiules2-1.png)
     
