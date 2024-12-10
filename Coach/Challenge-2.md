@@ -437,7 +437,7 @@ Now you’re ready to run the training pipeline and train the model.
 
 The deployment will take a long time. Wait until in the **Deployment state** is **Healthy**
     
-![deployhealthy](images/deployhealthy.png)
+![](images/deploy-status-healthy.png)
 
 1. On the Endpoints page, open the **predict-returns** real-time endpoint.
 1. Click on the **Consume** tab
@@ -453,6 +453,9 @@ The deployment will take a long time. Wait until in the **Deployment state** is 
     ```
 
 1. In the Compute section create a new Compute instance selecting the **Standard_D11_v2** instance.
+
+   >**NOTE:** The compute instance should already be created, use the same instance.
+   
 1. Wait for the compute to spin up (10 15 minutes)
 1. Paste in the following sample json in the data section of the python code. 
 
@@ -486,7 +489,7 @@ The deployment will take a long time. Wait until in the **Deployment state** is 
 1. Execute the cell
 1. View the results at the bottom
 
-    ![results](images/results.png)
+    ![](images/test-results.png)
     
 1. This sample json will provide a positive detection of a return
 
