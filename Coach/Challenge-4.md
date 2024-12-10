@@ -67,7 +67,7 @@
 
     ![uploadfiles](images/uploadfiles-1.png)
 
-1. From the **Upload** button click the arrow and select **Upload files**
+1. From the **Upload** button click the arrow and select **Upload files**. Upload all the PDF files from `C:\LabFiles\generatedpdfs` folder.
 
     ![uploadfiules 2](images/uploadfiules2-1.png)
     
