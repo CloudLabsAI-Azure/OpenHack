@@ -82,6 +82,9 @@ Demonstrate to the coach that you are able to provide a sample JSON segment, sho
 	"GlobalParameters": {}
 }
 ```
+
+<validation step="1865e412-e5d2-4a8b-ba5b-a83b5be4442e" />
+
 ## Resources
 
 - https://microsoftlearning.github.io/AI-900-AIFundamentals/instructions/02b-create-classification-model.html

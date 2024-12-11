@@ -27,6 +27,8 @@ The team needs to utilize the Jupyter Notebook, which will take the existing SQL
 ## Success Criteria
 Demonstrate to the coach a working search experience using the generated documents that use cognitive skills to provide a better search experience to find out what categories were provided to which locations.
 
+<validation step="3599a217-7e0b-467e-821a-ef74c11f8dfc" />
+
 ## Resources
 
 - https://learn.microsoft.com/en-us/azure/ai-studio/concepts/retrieval-augmented-generation

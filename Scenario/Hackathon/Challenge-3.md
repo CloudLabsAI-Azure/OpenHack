@@ -29,6 +29,8 @@ There are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/
 
 ![testimages](images/testimages.png)
 
+<validation step="accfe7c1-5b47-4971-b0bc-d1ed77092e2e" />
+
 ## Resources
 - [Create a custom Image Analysis model](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/model-customization?tabs=studio)
 
