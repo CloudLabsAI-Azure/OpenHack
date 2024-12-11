@@ -413,6 +413,8 @@ So far, many of the technologies and techniques provide value but none are reall
 1. Demonstrate the ability to generate the sample CSV file from the vector index.
 1. Demonstrate the sample website that shows the Cosmos DB data and SQL Server data.
 
+<validation step="40d198fc-e1ee-4ec2-b808-7cdd10bb5427" />
+
 ## Resources
 
 - [How to export data from a Microsoft SQL Server to a CSV file?](https://learnsql.com/blog/export-csv-file-ms-sql-server/)
