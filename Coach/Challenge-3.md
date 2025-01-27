@@ -197,3 +197,16 @@
 - https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/model-customization?tabs=studio
 
 
+### Hint Level 1 - Vision Setup
+
+* Review Vision Studio access requirements
+* Check image format requirements
+* Verify training image quantity meets minimums
+
+
+### Hint Level 2 - Model Training
+
+* Group similar products
+* Include multiple angles per product
+* Consider lighting variations
+* Tag with consistent nomenclature
