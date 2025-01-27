@@ -31,7 +31,7 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 
 - **Challenge 0 - Development Environment Configuration:** Ensure that you have the required prerequisites before diving into the challenges. The required software is already pre-installed in your hackathon environment: Visual Studio Code, SQL Server Management Studio (SSMS), Pandoc v3.5, Python v3.10.11, Node.js v18.16.1, and .NET Core v8.0.
 
-- **Challenge 1 - Restore an SQL Server Backup and Query the Data:** Participants need to restore an SQL Server backup and query the data using SQL Server Management Studio in Azure. The objective is to analyze the data through views or custom queries, uncover insights, and solve business challenges faced by the company.
+- **Challenge 1 - Query SQL Server Data:** Participants need to restore an SQL Server backup and query the data using SQL Server Management Studio in Azure. The objective is to analyze the data through views or custom queries, uncover insights, and solve business challenges faced by the company.
 
 - **Challenge 2 - Use Machine Learning to Expose Data Issues:** This challenge requires participants to set up an Azure Machine Learning compute environment, create datasets, and build a pipeline to transform the data. After running the pipeline, participants will train a machine learning model, deploy it as a service, and test it to detect data issues.
 
