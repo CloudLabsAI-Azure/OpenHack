@@ -11,6 +11,15 @@ Now that you have a database to find potential issues faced by Woodgrove Retail,
 Using Vision Studio and Azure Machine Learning, you will be tagging a few dozen images and will be building a service to repurpose the images on the website potentially.  
 There are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/images.zip) to start with.
 
+Your task:
+
+* Set up Azure Vision Studio
+* Train custom vision model using:
+  * Product image dataset
+  * Category labels
+  * Product attributes
+  * Implement a search endpoint
+
 | Product | Related Image Sample |
 |---------|----------------------|
 |Accessories|![Accessoires](images/Accessoires.png) |
@@ -25,13 +34,18 @@ There are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/
 
 ## Success Criteria
 
-- Once the model is trained, you should click on the **'Try it out'** link, upload some of the sample images, and validate if the results are appropriate.
+* Working image recognition model
+* Successful product matching
+* Integration with search functionality
+* Performance metrics meeting thresholds
+* Once the model is trained, you should click on the **'Try it out'** link, upload some of the sample images, and validate if the results are appropriate.
 
 ![testimages](images/testimages.png)
 
 <validation step="accfe7c1-5b47-4971-b0bc-d1ed77092e2e" />
 
 ## Resources
+
 - [Create a custom Image Analysis model](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/model-customization?tabs=studio)
 
 ## Conclusion
