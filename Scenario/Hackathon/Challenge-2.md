@@ -4,12 +4,21 @@
 
 ## Background Story
 
-Now that you have had a chance to explore the data let's use machine learning to figure out which portion of the data is creating the underlying issues. For this type of data issue, we have chosen to use a classification model. 
+Now that you have had a chance to explore the data let's use machine learning to figure out which portion of the data is creating the underlying issues. For this type of data issue, we have chosen to use a classification model. The goal is to use Machine Learning to identify patterns in returns and predict high-risk orders.
+
+You will be building a classification model using Designer that includes the following:
+
+* Data preparation
+* Feature engineering
+* Model training
+* Model evaluation
+* Deploy prediction endpoint
 
 ## Technical Details
 
 Create the following:
 
+- Create Azure ML workspace
 - Create compute
 - Create a dataset
 - Create a pipeline in Designer and load data to the canvas
@@ -23,6 +32,11 @@ Create the following:
 - Test the service
 
 ## Success Criteria
+
+* Working ML pipeline
+* Deployed prediction endpoint
+* Demonstration of predictions using test data
+* Accuracy metrics above baseline
 
 Demonstrate to the coach that you are able to provide a sample JSON segment, showing that it will properly predict either 0 or 1 based on the new service.
 
