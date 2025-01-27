@@ -115,9 +115,23 @@
 1. Final Output
    
     ![answer 2](images/catogery.png)
-  
-    
-    
 
+  
+### Hint Level 1 - Document Generation
+
+* Check PDF generation requirements
+* Verify blob storage permissions
+* Review cognitive search service tier
+
+
+### Hint Level 2 - Search Implementation
+
+* Consider these enrichment skills:
+  * OCR for text extraction
+  * Image analysis
+  * Key phrase extraction
+  * Entity recognition    
+    
 ## Bonus
+
 - Using the System message map the A_Category to the word Category to make the prompt easier to use.
