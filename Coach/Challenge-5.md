@@ -27,7 +27,7 @@
     FROM 
         RankedData
     WHERE 
-        row_num <= total_rows * 0.99;  -- Filtering for the top 30%
+        row_num <= total_rows * 0.30;  -- Filtering for the top 30%
     ```
 
 1. Click on **Execute** from the top toolbar and review the results once the query execution is complete.
@@ -125,7 +125,7 @@
 
    ![sampleprompt](images/sampleprompta.png)
     
-1. Use the following sample csv file to import into the newly created **Cosmos DB**
+1. For consistency, use the following sample csv file to import into the newly created **Cosmos DB**
 
     ```
     Item,Category,Quantity,Country
@@ -303,7 +303,7 @@ First, install the required dependencies using npm:
             },
         },
         options: {
-            database: 'AzureAIHack', // Update
+            database: 'SalesDB', // Update
             encrypt: true,
         },
     };
@@ -628,3 +628,19 @@ First, install the required dependencies using npm:
 1. The second tab will provide the first 15 rows of data from SQL Server
 
     ![sqldata](images/sqldata.png)
+
+
+### Hint Level 1 - Integration Planning
+
+* Map out service dependencies
+* Review authentication requirements
+* Plan data flow between services
+
+
+### Hint Level 2 - Implementation Steps
+
+* Break down into components:
+  * Data aggregation layer
+  * Search orchestration
+  * Result ranking
+  * Response generation
