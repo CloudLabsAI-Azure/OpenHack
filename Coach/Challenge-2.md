@@ -45,7 +45,7 @@
     * **Virtual machine type**: CPU
     * **Virtual machine size**:
         * Choose Select from all options
-        * Search for and select **Standard_DS11_v2**
+        * Search for and select **Standard_DS3_v2**
     * Select **Next**
     * **Idle seconds before scale down**: 120
     * **Enable SSH access**: Clear
@@ -519,3 +519,39 @@ The deployment will take a long time. Wait until in the **Deployment state** is 
     	"GlobalParameters": {}
     }
     ```
+
+### Hint Level 1 - Setup
+
+* Verify Azure ML workspace permissions
+* Check compute instance size requirements
+* Ensure dataset is properly registered
+
+### Hint Level 2 - Model Building
+
+Consider these features: 
+
+* Customer historical return rate
+* Product category return rates
+* Order value
+* Shipping time 
+
+Look for class imbalance in return data
+
+### Hint Level 3 - Pipeline Tips
+
+1. Data preparation steps: 
+
+   * Handle missing values
+   * Normalize numerical features
+   * Encode categorical variables
+
+2. Try these algorithms: 
+
+   * Two-Class Boosted Decision Tree
+   * Two-Class Logistic Regression
+
+### Unblocking Tips
+
+* Low accuracy: Check feature importance and class balance
+* Pipeline failures: Verify data types match expectations
+* Deployment issues: Check endpoint configuration
