@@ -8,6 +8,21 @@ So far, many of the technologies and techniques provide value but none are reall
 
 ## Technical Details
 
+### Integrate components:
+
+* ML predictions
+* Visual search
+* Cognitive search
+* Azure OpenAI
+
+### Implement advanced analytics:
+
+* Return risk assessment
+* Stock optimization
+* Category performance
+
+### Create unified search experience
+
 1. From the SQL Server, export out a CSV file based on the following Query:
    
     ```
@@ -29,7 +44,7 @@ So far, many of the technologies and techniques provide value but none are reall
     FROM 
         RankedData
     WHERE 
-        row_num <= total_rows * 0.99;  -- Filtering for the top 30%
+        row_num <= total_rows * 0.30;  -- Filtering for the top 30%
     ```
 
 1. You will be ingesting a CSV file into Blob Storage and then creating a vector search with an embedding model.
@@ -87,7 +102,7 @@ So far, many of the technologies and techniques provide value but none are reall
             },
         },
         options: {
-            database: 'AzureAIHack', // Update
+            database: 'SalesDB', // Update
             encrypt: true,
         },
     };
