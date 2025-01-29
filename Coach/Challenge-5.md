@@ -66,16 +66,15 @@
 
    ![](images/indeexes.png)
 
-1. From the dropdown select **Data in Azure AI Studio**.
+1. From the dropdown select **Data in Azure AI Foundry**.
 
-   ![](images/dataloc1.png)
+   ![](images/data-foundry.png)
 
-2. Click the radio button next to the **Data source** you created previously then click **Next**.
+1. Click the radio button next to the **Data source** you created previously then click **Next**.
 
-   ![](images/dataloc.png)
+   ![](images/select-data-foundry.png)
 
 1. Configure the **Azure AI Search** by selecting your **AI Search** and using the current **Index name** then click **Next**
-
 
 1. On the **Configure search settings** leave the default settings and then click **Next**.
 
@@ -85,7 +84,7 @@
 
    ![](images/vectorindex.png)
 
-1. Give the AI Studio time to complete the ingestion process
+1. Give the Azure AI Foundry time to complete the ingestion process
 
     ![status](images/status.png)
     
@@ -117,7 +116,7 @@
 
     ![whenandkind](images/whenandkinda.png)
     
-1. Use a Azure AI Studio prompt to generate a sample inventory needed
+1. Use a Azure AI Foundry prompt to generate a sample inventory needed
 
     ```
     based off the current orders what would be a provisional inventory as a csv file?
