@@ -4,7 +4,7 @@
 
 ## Task - 01
 
-1. Login to the Azure AI portal at `https://ai.azure.com/`.
+1. Login to the Azure AI Foundry portal at `https://ai.azure.com/`.
    
 1. Click on **Create project**.
 
