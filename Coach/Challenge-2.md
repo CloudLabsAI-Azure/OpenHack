@@ -452,7 +452,7 @@ The deployment will take a long time. Wait until in the **Deployment state** is 
     api_key=''
     ```
 
-1. In the Compute section create a new Compute instance selecting the **Standard_D11_v2** instance.
+1. In the Compute section, select the existing Compute instance (**Standard_D3_v2**).
 
    >**NOTE:** The compute instance should already be created, use the same instance.
    
