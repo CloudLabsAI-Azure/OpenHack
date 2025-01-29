@@ -1,4 +1,4 @@
-# Microsoft Azure OpenHack - Hackathon
+# Azure Innovators Hackathon: Elevating AI, Data, and RAG Mastery
 
 ### Overall Estimated Duration: 8 hours
 
@@ -43,7 +43,7 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 
 ## Getting Started with the Hackathon
 
-Welcome to your Microsoft Azure OpenHack - Hackathon! We have prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+Welcome to your Azure Innovators Hackathon: Elevating AI, Data, and RAG Mastery! We have prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
  
 ## Accessing your Hackathon Environment
  
@@ -69,7 +69,7 @@ For convenience, you can open the hackathon guide in a separate window by select
  
 ## Managing your Virtual Machine
  
-Feel free to **start, stop, or restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
 ![](images/resourses.png)
 
