@@ -58,7 +58,7 @@
 
     ![newdataset](images/ad-newdataset.png)
     
-1. Provide a unique **datasetname** and set the model to **Object detection** and also Select a container to use by clicking on the link. Then finally fill in the checkbox to **Allow Visual Studio to read and write to you blob storage**, Then click the **Create dataset** button.
+1. Provide a unique **datasetname** and set the model to **Object detection** and select the **openhackstrg** as storage account and **images** as container to use by clicking on the link. Then finally fill in the checkbox to **Allow Visual Studio to read and write to you blob storage**, Then click the **Create dataset** button.
 
     ![selectedcontainer](images/dataset-1.png)  
 
