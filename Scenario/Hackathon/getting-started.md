@@ -49,7 +49,7 @@ Welcome to your Azure Innovators Hackathon: Elevating AI, Data, and RAG Mastery!
  
 Once you are ready to dive in, your virtual machine and hackathon guide will be right at your fingertips within your web browser.
 
-![](images/getting-started-openhack.png)
+![](images/openhack-labguide.png)
 
 ### Virtual Machine & Hackathon Guide
  
@@ -72,6 +72,12 @@ For convenience, you can open the hackathon guide in a separate window by select
 Feel free to **Start, Stop, or Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
 ![](images/resourses.png)
+
+## Lab Guide Zoom In/Zoom Out
+ 
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![](media/zoom-feature.png)
 
 ## Let's get started with the Azure Portal.
  
