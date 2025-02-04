@@ -43,7 +43,7 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 
 ## Getting Started with the Hackathon
 
-Welcome to your Azure Innovators Hackathon: Elevating AI, Data, and RAG Mastery! We have prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+Welcome to your Microsoft Azure OpenHack Workshop! We have prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
  
 ## Accessing your Hackathon Environment
  
