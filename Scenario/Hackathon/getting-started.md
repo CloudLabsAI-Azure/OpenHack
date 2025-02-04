@@ -1,4 +1,4 @@
-# Azure Innovators Hackathon: Elevating AI, Data, and RAG Mastery
+# Microsoft Azure OpenHack
 
 ### Overall Estimated Duration: 8 hours
 
