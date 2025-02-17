@@ -42,11 +42,14 @@ Your task:
 
 ![testimages](images/testimages.png)
 
+<!--  
 <validation step="accfe7c1-5b47-4971-b0bc-d1ed77092e2e" />
+-->
 
 ## Resources
 
-- [Create a custom Image Analysis model](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/model-customization?tabs=studio)
+- [Labeling images and text documents](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-label-data?view=azureml-api-2)
+- [What is Custom Vision?](https://learn.microsoft.com/en-us/azure/ai-services/Custom-Vision-Service/overview)
 
 ## Conclusion
 
