@@ -42,9 +42,6 @@ Your task:
 
 ![testimages](images/testimages.png)
 
- 
-<!-- <validation step="accfe7c1-5b47-4971-b0bc-d1ed77092e2e" /> -->
-
 
 ## Resources
 
