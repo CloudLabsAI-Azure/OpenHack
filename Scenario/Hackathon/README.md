@@ -19,6 +19,38 @@ Each team will deliver a fully functional prototype of the Smart Inventory Manag
 * **Scalability**: The application should be designed with scalability in mind, using Azure's cloud capabilities.
 * **Usability**: The platform should enhance the user experience for both the retail company’s staff (inventory management) and customers (engagement).
 
+## Resources Provided
 
+**Data Assets:**  
+
+* SQL Server backup
+* Product images dataset
+* Sample customer queries
+* Historical sales data
+
+
+## Technical Resources
+
+* Pre-provisioned SQL Server with data
+* Pre-provisioned Cosmos DB
+* Jupyter notebooks
+* Sample queries
+* Configuration templates
+* Testing scenarios
+
+
+## Documentation
+
+* Setup guides
+* API documentation
+* Architecture diagrams
+* Best practices
+
+## Progressive Learning Path 
+
+* Each challenge builds upon previous work
+* Increasing complexity in AI implementation
+* Focus on practical business outcomes
+* Clear success criteria for each stage
 
 
