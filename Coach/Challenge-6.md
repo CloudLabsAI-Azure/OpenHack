@@ -1,6 +1,7 @@
 # Challenge 6 - Add a chat application
 
 ## Create a view
+
 1. To prepare the data set to be imported into Azure AI Search, from the Azure portal, connect to the Azure SQL database and use Query Editor to create a view of order items created in the year 2023 by running the following T-SQL script: 
 
     ```
@@ -453,15 +454,15 @@ From the Command Prompt-based terminal pane in VS Code, run
 
 1. Test the chat window with the following prompts
 
-> Note: Please only run one at a time
+    > Note: Please only run one at a time
 
-```
-What is the highest order value in 2023?
-How many orders were created in 01 2023?
-How many sweaters were sold in January 2023? 
-How many items in each category were sold in January 2023?
-How many items in each category were sold in the first quarter of 2023?
-```
+    ```
+    What is the highest order value in 2023?
+    How many orders were created in 01 2023?
+    How many sweaters were sold in January 2023? 
+    How many items in each category were sold in January 2023?
+    How many items in each category were sold in the first quarter of 2023?
+    ```
 
 1. Results will resemble the following:
 
