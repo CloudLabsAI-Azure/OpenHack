@@ -144,204 +144,205 @@
 
     ![folders](images/folders.png)
     
-1. Create the Python API 
-    * In VSCode, create a file named main.py
-    * Add the following code to main.py (make sure to replace the <placeholder> values with those you recorded earlier in this challenge):
-    ```
-    from fastapi import FastAPI, Request
-    from fastapi.responses import HTMLResponse
-    from fastapi.staticfiles import StaticFiles
-    from azure.core.credentials import AzureKeyCredential
-    from azure.search.documents import SearchClient
-    from azure.search.documents.indexes import SearchIndexClient
-    from openai import AzureOpenAI
+1. Create the Python API
+   
+   * In VSCode, create a file named main.py
+   * Add the following code to main.py (make sure to replace the <placeholder> values with those you recorded earlier in this challenge):
+     ```
+     from fastapi import FastAPI, Request
+     from fastapi.responses import HTMLResponse
+     from fastapi.staticfiles import StaticFiles
+     from azure.core.credentials import AzureKeyCredential
+     from azure.search.documents import SearchClient
+     from azure.search.documents.indexes import SearchIndexClient
+     from openai import AzureOpenAI
     
-    app = FastAPI()
+     app = FastAPI()
     
-    # Azure AI Search Configuration
-    SEARCH_SERVICE_ENDPOINT = "https://mysearchv111.search.windows.net"
-    SEARCH_INDEX_NAME = "azuresql-index"
-    SEARCH_API_KEY = "Shd7goh1B2dXyBeU0LP1952Ev2onrLJohkyTrxTAxEAzSeAsuN3S"
+     # Azure AI Search Configuration
+     SEARCH_SERVICE_ENDPOINT = "https://mysearchv111.search.windows.net"
+     SEARCH_INDEX_NAME = "azuresql-index"
+     SEARCH_API_KEY = "Shd7goh1B2dXyBeU0LP1952Ev2onrLJohkyTrxTAxEAzSeAsuN3S"
     
-    # Azure OpenAI Configuration
-    AZURE_OPENAI_ENDPOINT = "https://ai-bnielsen2132ai828320706413.openai.azure.com"
-    AZURE_OPENAI_KEY = "03xISqy5lrH5WCm2DxIp5BXBWViuVVyg8IplXnds7sPrFiu2Lc4sJQQJ99BBACHYHv6XJ3w3AAAAACOG5HX2"
-    AZURE_OPENAI_DEPLOYMENT = "gpt-4o"  # Model deployment name in Azure OpenAI (gpt-4o)
-    
-    
-    # Initialize Azure AI Search clients
-    search_client = SearchClient(
-        SEARCH_SERVICE_ENDPOINT, SEARCH_INDEX_NAME, AzureKeyCredential(SEARCH_API_KEY)
-    )
-    index_client = SearchIndexClient(
-        SEARCH_SERVICE_ENDPOINT, AzureKeyCredential(SEARCH_API_KEY)
-    )
-    
-    # Initialize Azure OpenAI client
-    openai_client = AzureOpenAI(
-        azure_endpoint=AZURE_OPENAI_ENDPOINT,
-        api_key=AZURE_OPENAI_KEY,
-        api_version="2023-09-01-preview",
-    )
+     # Azure OpenAI Configuration
+     AZURE_OPENAI_ENDPOINT = "https://ai-bnielsen2132ai828320706413.openai.azure.com"
+     AZURE_OPENAI_KEY = "03xISqy5lrH5WCm2DxIp5BXBWViuVVyg8IplXnds7sPrFiu2Lc4sJQQJ99BBACHYHv6XJ3w3AAAAACOG5HX2"
+     AZURE_OPENAI_DEPLOYMENT = "gpt-4o"  # Model deployment name in Azure OpenAI (gpt-4o)
     
     
-    # Retrieve the index schema to describe it to the Azure OpenAI model
-    def get_index_schema():
-        """Fetches and describes the Azure AI Search index schema."""
-        index = index_client.get_index(SEARCH_INDEX_NAME)
-        field_descriptions = {}
-        for field in index.fields:
-            field_name = field.name
-            field_type = field.type
-            if field_type == "Edm.String":
-                description = f"{field_name} is a text field."
-            elif field_type == "Edm.Int32":
-                description = f"{field_name} is an integer field."
-            elif field_type == "Edm.Double":
-                description = f"{field_name} is a floating-point number field."
-            elif field_type == "Edm.DateTimeOffset":
-                description = f"{field_name} is a date field in ISO 8601 format."
-            else:
-                description = f"{field_name} is a {field_type} field."
-            field_descriptions[field_name] = description
-        return field_descriptions
+     # Initialize Azure AI Search clients
+     search_client = SearchClient(
+         SEARCH_SERVICE_ENDPOINT, SEARCH_INDEX_NAME, AzureKeyCredential(SEARCH_API_KEY)
+     )
+     index_client = SearchIndexClient(
+         SEARCH_SERVICE_ENDPOINT, AzureKeyCredential(SEARCH_API_KEY)
+     )
+    
+     # Initialize Azure OpenAI client
+     openai_client = AzureOpenAI(
+         azure_endpoint=AZURE_OPENAI_ENDPOINT,
+         api_key=AZURE_OPENAI_KEY,
+         api_version="2023-09-01-preview",
+     )
     
     
-    # Convert a natural language query to Lucene syntax to be used by an index search
-    def generate_lucene_query(user_query):
-        """Uses GPT-4o to convert a natural language query into Lucene based on the index schema."""
-        index_schema = get_index_schema()
-        schema_description = "\n".join([f"- {desc}" for desc in index_schema.values()])
-        prompt = (
-            "Convert the following natural language query into a Lucene search query for Azure AI Search.\n"
-            "Use the following index fields and their types:\n"
-            f"{schema_description}\n\n"
-            f"User query: '{user_query}'\n"
-            "Lucene query:"
-        )
-        response = openai_client.chat.completions.create(
-            model=AZURE_OPENAI_DEPLOYMENT,
-            messages=[
-                {
-                    "role": "system",
-                    "content": "You are an AI that converts user queries into precise Lucene queries for Azure AI Search.",
-                },
-                {"role": "user", "content": prompt},
-            ],
-            max_tokens=100,
-        )
-        try:
-            lucene_query = response.choices[0].message.content.strip()
-            lucene_query = lucene_query.split("\n")[
-                -1
-            ].strip()  # Extract the final line which should be the query
-            lucene_query = lucene_query.replace("```", "").replace(
-                "\n", ""
-            )  # Clean newline and backticks
-        except AttributeError as e:
-            print(f"Error accessing response content: {e}")
-            lucene_query = ""
-        # Additional cleaning logic
-        lucene_query = " ".join(
-            [word for word in lucene_query.split() if "_exists_" not in word]
-        )
-        lucene_query = (
-            lucene_query.replace("OrderDate:[", "OrderDate ge ")
-            .replace("TO", " and OrderDate le ")
-            .replace("]", "")
-        )
-        if "sortby" in lucene_query:
-            lucene_query = lucene_query.split("sortby")[
-                0
-            ].strip()  # Remove any sortby from filter
-        if "ORDER BY" in lucene_query:
-            lucene_query = (
-                lucene_query.replace("ORDER BY", "$orderby=")
-                .replace("LIMIT 1", "$top=1")
-                .strip()
-            )
-        return lucene_query
+     # Retrieve the index schema to describe it to the Azure OpenAI model
+     def get_index_schema():
+         """Fetches and describes the Azure AI Search index schema."""
+         index = index_client.get_index(SEARCH_INDEX_NAME)
+         field_descriptions = {}
+         for field in index.fields:
+             field_name = field.name
+             field_type = field.type
+             if field_type == "Edm.String":
+                 description = f"{field_name} is a text field."
+             elif field_type == "Edm.Int32":
+                 description = f"{field_name} is an integer field."
+             elif field_type == "Edm.Double":
+                 description = f"{field_name} is a floating-point number field."
+             elif field_type == "Edm.DateTimeOffset":
+                 description = f"{field_name} is a date field in ISO 8601 format."
+             else:
+                 description = f"{field_name} is a {field_type} field."
+             field_descriptions[field_name] = description
+         return field_descriptions
     
     
-    # Generate an Azure OpenAI model response based on the Lucene query search results
-    def get_llm_response(context, user_query):
-        """Generates a concise AI response based on the search results."""
-        response = openai_client.chat.completions.create(
-            model=AZURE_OPENAI_DEPLOYMENT,
-            messages=[
-                {
-                    "role": "system",
-                    "content": "You are an AI assistant that provides concise answers to user queries based on the provided search data.",
-                },
-                {
-                    "role": "user",
-                    "content": f"Given this data: {context}, answer the question: '{user_query}' in one sentence.",
-                },
-            ],
-            max_tokens=100,
-        )
-        return response.choices[0].message.content.strip().split(".")[0] + "."
+     # Convert a natural language query to Lucene syntax to be used by an index search
+     def generate_lucene_query(user_query):
+         """Uses GPT-4o to convert a natural language query into Lucene based on the index schema."""
+         index_schema = get_index_schema()
+         schema_description = "\n".join([f"- {desc}" for desc in index_schema.values()])
+         prompt = (
+             "Convert the following natural language query into a Lucene search query for Azure AI Search.\n"
+             "Use the following index fields and their types:\n"
+             f"{schema_description}\n\n"
+             f"User query: '{user_query}'\n"
+             "Lucene query:"
+         )
+         response = openai_client.chat.completions.create(
+             model=AZURE_OPENAI_DEPLOYMENT,
+             messages=[
+                 {
+                     "role": "system",
+                     "content": "You are an AI that converts user queries into precise Lucene queries for Azure AI Search.",
+                 },
+                 {"role": "user", "content": prompt},
+             ],
+             max_tokens=100,
+         )
+         try:
+             lucene_query = response.choices[0].message.content.strip()
+             lucene_query = lucene_query.split("\n")[
+                 -1
+             ].strip()  # Extract the final line which should be the query
+             lucene_query = lucene_query.replace("```", "").replace(
+                 "\n", ""
+             )  # Clean newline and backticks
+         except AttributeError as e:
+             print(f"Error accessing response content: {e}")
+             lucene_query = ""
+         # Additional cleaning logic
+         lucene_query = " ".join(
+             [word for word in lucene_query.split() if "_exists_" not in word]
+         )
+         lucene_query = (
+             lucene_query.replace("OrderDate:[", "OrderDate ge ")
+             .replace("TO", " and OrderDate le ")
+             .replace("]", "")
+         )
+         if "sortby" in lucene_query:
+             lucene_query = lucene_query.split("sortby")[
+                 0
+             ].strip()  # Remove any sortby from filter
+         if "ORDER BY" in lucene_query:
+             lucene_query = (
+                 lucene_query.replace("ORDER BY", "$orderby=")
+                 .replace("LIMIT 1", "$top=1")
+                 .strip()
+             )
+         return lucene_query
     
     
-    # Serve static files (CSS, JS)
-    app.mount("/static", StaticFiles(directory="static"), name="static")
+     # Generate an Azure OpenAI model response based on the Lucene query search results
+     def get_llm_response(context, user_query):
+         """Generates a concise AI response based on the search results."""
+         response = openai_client.chat.completions.create(
+             model=AZURE_OPENAI_DEPLOYMENT,
+             messages=[
+                 {
+                     "role": "system",
+                     "content": "You are an AI assistant that provides concise answers to user queries based on the provided search data.",
+                 },
+                 {
+                     "role": "user",
+                     "content": f"Given this data: {context}, answer the question: '{user_query}' in one sentence.",
+                 },
+             ],
+             max_tokens=100,
+         )
+         return response.choices[0].message.content.strip().split(".")[0] + "."
     
     
-    # Chat Interface (Embeddable Page)
-    @app.get("/chat", response_class=HTMLResponse)
-    async def chat_interface():
-        return """
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
-        <title>Azure OpenAI Chat</title>
-        <link rel="stylesheet" href="/static/styles.css">
-    </head>
-    <body>
-        <div class="chat-container">
-            <div id="chat-box" class="chat-box"></div>
-            <div class="input-container">
-                <input type="text" id="user-input" placeholder="Type your message..." />
-                <button id="send-button">Send</button>
-            </div>
-        </div>
-        <script src="/static/script.js"></script>
-    </body>
-    </html>
-        """
+     # Serve static files (CSS, JS)
+     app.mount("/static", StaticFiles(directory="static"), name="static")
     
     
-    # API Endpoint for Chat
-    @app.post("/chat-api")
-    async def chat(request: Request):
-        data = await request.json()
-        user_query = data.get("message", "")
+     # Chat Interface (Embeddable Page)
+     @app.get("/chat", response_class=HTMLResponse)
+     async def chat_interface():
+         return """
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
+         <title>Azure OpenAI Chat</title>
+         <link rel="stylesheet" href="/static/styles.css">
+     </head>
+     <body>
+         <div class="chat-container">
+             <div id="chat-box" class="chat-box"></div>
+             <div class="input-container">
+                 <input type="text" id="user-input" placeholder="Type your message..." />
+                 <button id="send-button">Send</button>
+             </div>
+         </div>
+         <script src="/static/script.js"></script>
+     </body>
+     </html>
+         """
     
-        try:
-            # Step 1: Convert the user query to a Lucene query
-            lucene_query = generate_lucene_query(user_query)
     
-            # Step 2: Execute the search in Azure AI Search
-            results = search_client.search(search_text="*", filter=lucene_query)
-            items = [dict(result) for result in results]
+     # API Endpoint for Chat
+     @app.post("/chat-api")
+     async def chat(request: Request):
+         data = await request.json()
+         user_query = data.get("message", "")
     
-            # Step 3: Generate an AI-enhanced response
-            llm_response = get_llm_response(items, user_query)
+         try:
+             # Step 1: Convert the user query to a Lucene query
+             lucene_query = generate_lucene_query(user_query)
+     
+             # Step 2: Execute the search in Azure AI Search
+             results = search_client.search(search_text="*", filter=lucene_query)
+             items = [dict(result) for result in results]
     
-            return {
-                "query": user_query,
-                "lucene_query": lucene_query,
-                "results": items,
-                "ai_response": llm_response,
-            }
+             # Step 3: Generate an AI-enhanced response
+             llm_response = get_llm_response(items, user_query)
     
-        except Exception as e:
-            return {"error": str(e)}
+             return {
+                 "query": user_query,
+                 "lucene_query": lucene_query,
+                 "results": items,
+                 "ai_response": llm_response,
+             }
+    
+         except Exception as e:
+             return {"error": str(e)}
 
-    ```
+     ```
     
 1. Here is the code for the script.js file
 
@@ -450,7 +451,7 @@ From the Command Prompt-based terminal pane in VS Code, run
     * This will launch FastAPI and make it available via http://127.0.0.1:8000
     * To validate, open a web browser window and browse to http://127.0.0.1:8000/chat
     
-        ![chatwindow](images/chatwindow.png)
+    ![chatwindow](images/chatwindow.png)
 
 1. Test the chat window with the following prompts
 
