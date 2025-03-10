@@ -41,6 +41,8 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 
 - **Challenge 5 - Advanced Retrieval-Augmented Generation (RAG) Pattern:** In this challenge, participants will export data from SQL Server to a CSV file and build an inventory application using Node.js. The focus is on implementing an advanced RAG pattern to enhance data retrieval and search capabilities in the application, improving overall inventory management.
 
+- **Challenge 6 - Add AI Application to app:** In this challenge, participants will create an Azure AI Search index based on the SQL database view, implement an API for natural language queries of the Azure AI Search index to get a chat application running locally using Python environment.
+
 ## Getting Started with the Hackathon
 
 Welcome to your Microsoft Azure OpenHack Workshop! We have prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
