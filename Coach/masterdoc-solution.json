@@ -23,7 +23,11 @@
      {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/OpenHack/refs/heads/main/Coach/Challenge-5.md",
         "Order": 5
-     }
+     },
+     {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/OpenHack/refs/heads/new-content-updates/Coach/Challenge-6.md",
+        "Order": 6
+     }    
    ]
  }
 ]
