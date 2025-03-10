@@ -459,7 +459,7 @@
     * This will launch FastAPI and make it available via http://127.0.0.1:8000
     * To validate, open a web browser window and browse to http://127.0.0.1:8000/chat
     
-        ![chatwindow](images/chatwindow.png)
+    ![chatwindow](images/chatwindow.png)
 
 1. Test the chat window with the following prompts
 
