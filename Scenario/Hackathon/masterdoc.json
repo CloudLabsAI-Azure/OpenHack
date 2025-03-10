@@ -35,6 +35,10 @@
      {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/OpenHack/refs/heads/main/Scenario/Hackathon/Challenge-5.md",
         "Order": 8
+     }, 
+     {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/OpenHack/refs/heads/main/Scenario/Hackathon/Challenge-6.md",
+        "Order": 9
      }
    ]
  }
