@@ -1,5 +1,7 @@
 # Challenge 6 - Add AI Application to app
 
+### Estimated Duration: 60 Minutes
+
 ## Create a view
 1. To prepare the data set to be imported into Azure AI Search, from the Azure portal, connect to the Azure SQL database and use Query Editor to create a view of order items created in the year 2023 by running the following T-SQL script: 
 
@@ -466,3 +468,7 @@ From the Command Prompt-based terminal pane in VS Code, run
 1. Results will resemble the following:
 
     ![resultschat](images/resultschat.png)
+
+## Conclusion
+
+In this challenge, you created a view using SQL scripts, created an Azure AI search service, created an Azure AI search index on the SQL database view, deployed Azure OpenAI models and implemented an API for natural language queries of the Azure AI Search index to get the app running locally.
