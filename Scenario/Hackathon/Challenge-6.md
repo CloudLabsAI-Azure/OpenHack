@@ -168,13 +168,13 @@
      app = FastAPI()
     
      # Azure AI Search Configuration
-     SEARCH_SERVICE_ENDPOINT = "https://mysearchv111.search.windows.net"
-     SEARCH_INDEX_NAME = "azuresql-index"
-     SEARCH_API_KEY = "Shd7goh1B2dXyBeU0LP1952Ev2onrLJohkyTrxTAxEAzSeAsuN3S"
+     SEARCH_SERVICE_ENDPOINT = "<<Replace-the-Search-Service-Endpoint>>"
+     SEARCH_INDEX_NAME = "<<Replace-the-Search-Index-name>>"
+     SEARCH_API_KEY = "<<Replace-the-Search-API-Key>>"
     
      # Azure OpenAI Configuration
-     AZURE_OPENAI_ENDPOINT = "https://ai-bnielsen2132ai828320706413.openai.azure.com"
-     AZURE_OPENAI_KEY = "03xISqy5lrH5WCm2DxIp5BXBWViuVVyg8IplXnds7sPrFiu2Lc4sJQQJ99BBACHYHv6XJ3w3AAAAACOG5HX2"
+     AZURE_OPENAI_ENDPOINT = "<<Replace-the-Azure-OpenAI-Endpoint>>"
+     AZURE_OPENAI_KEY = "<<Replace-the-Azure-OpenAI-Key>>"
      AZURE_OPENAI_DEPLOYMENT = "gpt-4o"  # Model deployment name in Azure OpenAI (gpt-4o)
     
     
