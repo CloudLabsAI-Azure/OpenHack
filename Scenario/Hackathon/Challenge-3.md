@@ -34,4 +34,4 @@ Your task:
 
 ## Conclusion
 
-Completing this challenge will enable you to integrate custom vision capabilities into applications using Custom Vision Studio. You will learn how to train the images and test the model based on tags of the images uploaded.
+Completing this challenge will enable you to integrate custom vision capabilities using Custom Vision Studio. You will learn how to train the images and test the model based on tags of the images uploaded.
