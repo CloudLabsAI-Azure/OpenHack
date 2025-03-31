@@ -9,44 +9,28 @@ Now that you have a database to find potential issues faced by Woodgrove Retail,
 ## Technical Details
 
 Using Vision Studio and Azure Machine Learning, you will be tagging a few dozen images and will be building a service to repurpose the images on the website potentially.  
-There are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/images.zip) to start with.
+
+Here are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/images.zip) to start with.
 
 Your task:
 
-* Set up Azure Vision Studio
-* Train custom vision model using:
-  * Product image dataset
-  * Category labels
-  * Product attributes
-  * Implement a search endpoint
-
-| Product | Related Image Sample |
-|---------|----------------------|
-|Accessories|![Accessoires](images/Accessoires.png) |
-|Bedclothes|![Bedclothes](images/Bedclothes.png)|
-|Coffee Mug|![Coffee Mug](images/CoffeeMug.png)|
-|Gimmick|![Gimmick](images/Gimmick.png)|
-|Hoodie|![Hoodie](images/Hoodie.png)|
-|Rubber boots|![Rubber boots](images/Rubberboots.png)|
-|Sweater|![Sweater](images/Sweater.png)|
-|T-Shirt long|![T-Shirt long](images/T-Shirtlong.png)|
-|T-Shirt short|![tshirt](images/T-Shirtshort.png)|
+* Set up Azure Custom Vision service
+* Visit the Custom Vision web page
+* Upload each folder and tag the images with the folder name
+* Train
 
 ## Success Criteria
 
-* Working image recognition model
-* Successful product matching
-* Integration with search functionality
-* Performance metrics meeting thresholds
-* Once the model is trained, you should click on the **'Try it out'** link, upload some of the sample images, and validate if the results are appropriate.
+* Successfully test against the supplied images in the Test folder
 
-![testimages](images/testimages.png)
+![testimages](images/coffeemug.png)
 
 
 ## Resources
 
-- [Labeling images and text documents](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-label-data?view=azureml-api-2)
-- [What is Custom Vision?](https://learn.microsoft.com/en-us/azure/ai-services/Custom-Vision-Service/overview)
+- [Quickstart: Build an image classification model with the Custom Vision portal](https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/getting-started-build-a-classifier?source=recommendations)
+- [Create Custom Vision](https://portal.azure.com/?microsoft_azure_marketplace_ItemHideKey=microsoft_azure_cognitiveservices_customvision#create/Microsoft.CognitiveServicesCustomVision)
+- [Custom Vision web page](https://customvision.ai/)
 
 ## Conclusion
 
