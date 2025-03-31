@@ -10,7 +10,7 @@ Now that you have a database to find potential issues faced by Woodgrove Retail,
 
 Using Vision Studio and Azure Machine Learning, you will be tagging a few dozen images and will be building a service to repurpose the images on the website potentially.  
 
-Here are the [images](https://openhackguides.blob.core.windows.net/ai-openhack/images.zip) to start with.
+Here are the [images]([https://openhackguides.blob.core.windows.net/ai-openhack/images.zip](https://openhackguides.blob.core.windows.net/ai-openhack/ArticlesOfClothing.zip)) to start with.
 
 Your task:
 
