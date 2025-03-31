@@ -118,6 +118,10 @@
 
    image
 
+## Resources
 
+- [Quickstart: Build an image classification model with the Custom Vision portal](https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/getting-started-build-a-classifier?source=recommendations)
+- [Create Custom Vision](https://portal.azure.com/?microsoft_azure_marketplace_ItemHideKey=microsoft_azure_cognitiveservices_customvision#create/Microsoft.CognitiveServicesCustomVision)
+- [Custom Vision web page](https://customvision.ai/)
 
 
