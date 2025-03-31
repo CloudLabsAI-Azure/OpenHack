@@ -34,4 +34,4 @@ Your task:
 
 ## Conclusion
 
-Completing this challenge will enable you to integrate custom vision capabilities into applications using Custom Vision Studio. You will also learn how to develop AI-powered image search features and enhance user experience by allowing customers to search products based on images they upload.
+Completing this challenge will enable you to integrate custom vision capabilities into applications using Custom Vision Studio. You will learn how to train the images and test the model based on tags of the images uploaded.
