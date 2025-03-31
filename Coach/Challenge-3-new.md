@@ -50,7 +50,7 @@
    - Resource should select the service previously created
    - Leave the **Project type** to **Classification**
    - Leave **Classification Types** to **Multiclass (Single tag per image)**
-   - Leave the **Domains** to **General [A2]
+   - Leave the **Domains** to **General [A2]**
   
    ![](images/custom-vision-create-new-project.png)
 
