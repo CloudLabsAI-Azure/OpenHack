@@ -10,7 +10,7 @@
 
 1. Create a Custom Vision AI service.
 
-   image
+   ![](images/custom-vision.png)
 
 1. In the Basics tab, provide the necessary details.
 
@@ -23,9 +23,9 @@
    - **Prediction pricing tier** : **Free F0**
    - Click **Review + Create**
   
-   image
+   ![](images/custom-vision-create-01.png)
 
-   image
+   ![](images/custom-vision-create-02.png)
 
 1. After successful deployment of the Custom Vision Service open the following url and **SIGN IN** using your Azure credentials.
 
@@ -33,15 +33,15 @@
    https://customvision.ai/
    ```
 
-   image
+   ![](images/custom-vision-sign-in.png)
 
 1. Agree to the Terms of Service.
 
-   image
+   ![](images/custom-vision-agree-terms.png)
 
 1. Click on the **NEW PROJECT** card.
 
-   image
+   ![](images/custom-vision-new-project.png)
 
 1. In the **Create new project** dialog enter the following and then click **Create project**:
    
@@ -52,71 +52,71 @@
    - Leave **Classification Types** to **Multiclass (Single tag per image)**
    - Leave the **Domains** to **General [A2]
   
-   image
+   ![](images/custom-vision-create-new-project.png)
 
    > **Note:** Might take a minute before it displays in the UI.
 
 1. In your project, under **Training Images**, click on **Add images**.
 
-   image
+   ![](images/custom-vision-add-images.png)
 
 1. Select the **Accessories** folder under the **Training** folder, select all the images and click on **Open**.
 
-   image
+   ![](images/custom-vision-add-images-accessories.png)
 
 1. Tag the images as **Accessories** and click on **Upload 17 files**.
 
-   image
+   ![](images/custom-vision-tag-accessories.png)
 
 1. Click on **Done** once all the images of the Accessories folder have been uploaded.
 
-   image
+   ![](images/custom-vision-tag-accessories-done.png)
 
 1. Similarly, repeat for all the other folders in the **Training** folder by clicking on the **Add images** button at the upper left.
 
-   image
+   ![](images/add-images-button.png)
 
 1. Once all the images in the the **Training** folder have been tagged, you will see the following tags in the left menu.
 
-   image
+   ![](images/custom-vision-all-tags.png)
 
 1. Click the **Train** button on the top row of links.
 
-   image
+   ![](images/custom-vision-train.png)
 
 1. Click the next **Train** button that comes up in the dialog and leave it at **Quick Training**.
 
-   image
+   ![](images/custom-vision-quick-training.png)
 
 1. Once the training has completed the screen will resemble the following.
 
-   image
+   ![](images/custom-vision-iteration.png)
 
-   image
+   ![](images/custom-vision-performance-per-tag.png)
 
 1. Click on the **Quick Test** button on the top row.
 
-   image
+   ![](images/custom-vision-quick-test.png)
 
 1. Click on **Browse local files** button.
 
-   image
+   ![](images/custom-vision-browse-local-files.png)
 
 1. Select one of the items in the **Test** folder and click on **Open**.
 
-   image
+   ![](images/custom-vision-test-folder.png)
 
 1. The cowboy hat has over 70% chance of being an **Accessories**.
 
-   image
+   ![](images/cowboy-hat.png)
 
 1. Coffee mug is over 99% match.
 
-   image
+   ![](images/cofee-mug.png)
 
 1. Rubber boots is also over 99% match.
 
-   image
+   ![](images/rubber-boots.png)
 
 ## Resources
 
