@@ -34,4 +34,4 @@ Your task:
 
 ## Conclusion
 
-Completing this challenge will enable you to integrate computer vision capabilities into applications using Azure Vision Studio and Machine Learning. You will also learn how to develop AI-powered image search features and enhance user experience by allowing customers to search products based on images they upload.
+Completing this challenge will enable you to integrate computer vision capabilities into applications using Azure Vision Studio. You will also learn how to develop AI-powered image search features and enhance user experience by allowing customers to search products based on images they upload.
