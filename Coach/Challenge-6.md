@@ -52,11 +52,11 @@
 
 1. From the Azure portal, create an Azure AI Search service with the following settings: 
 
-    * Location: preferably the same or close to the region hosting the Azure SQL database
-    * Pricing tier: Basic with 1 partition (this seems to be entirely sufficient considering the size of the data set)
+   * Location: preferably the same or close to the region hosting the Azure SQL database
+   * Pricing tier: Basic with 1 partition (this seems to be entirely sufficient considering the size of the data set)
 
 
-    > Note: Provisioning should take less than 1 minute. 
+   > Note: Provisioning should take less than 1 minute. 
 
 1. Record the value of Url (Oveview) and the primary admin key of the resource (Settings -> Keys) 
 
