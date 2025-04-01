@@ -8,7 +8,7 @@
 
    ![](images/aml-search.png)
    
-1. Select **+ Create > New Workspace** and specify the following settings and click on **Next**: 
+1. Select **+ Create > New Workspace** and specify the following settings and click on **Review + create** and then **Create**. 
    
     * **Subscription**: Your Azure subscription.
     * **Resource group**: **openhack**
@@ -20,10 +20,6 @@
     * **Container registry**: None (one will be created automatically the first time you deploy a model to a container)
   
    ![](images/aml-basics-tab.png)
-
-1. On the **Networking** tab, select **Public** and click on **Review + create** and then **Create**.
-
-   ![](images/aml-networking-tab.png)
 
 1. Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
 
