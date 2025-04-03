@@ -11,9 +11,9 @@ Here is a description of the data
 
 1. Visit the Azure portal and get the connection settings for the pre-built Azure SQL Database
 
-1. Open the Database in SQL Server, after setting the firewall rule
+2. Open the Database in SQL Server, after setting the firewall rule
 
-1. Copy the SQL from the **MainOrders** view to look at all 24,815 rows
+3. Copy the SQL from the **MainOrders** view to look at all 24,815 rows
 
     ```
     SELECT        dbo.Orders._KEY_OrderNo, dbo.Orders._KEY_Supplier, dbo.Orders.ArticleNo, dbo.Article.A_Category, dbo.Supplier.S_Country, dbo.Customer.KEY_CustomerNo, dbo.Customer.C_MeansOfPayment, dbo.Customer.C_Fit, 
@@ -25,7 +25,7 @@ Here is a description of the data
     ```
 
 
-1. Starting from that sample query its possible to modify it to get just the important columns and also the pertinent data with the following query:
+4. Starting from that sample query its possible to modify it to get just the important columns and also the pertinent data with the following query:
 
     ```
     SELECT   COUNT(dbo.Orders.F_IsReturned),   dbo.Article.A_Category
@@ -38,7 +38,7 @@ Here is a description of the data
     						 ORDER BY COUNT(dbo.Orders.F_IsReturned) DESC
     ```
 
-1. This query will provide the following result and shows that the top 2 Categories that have issues are **Accessoires** and **T-Shirtshort** .
+5. This query will provide the following result and shows that the top 2 Categories that have issues are **Accessoires** and **T-Shirtshort** .
 
     ![categoryissues](images/categoryissues.png)
     
