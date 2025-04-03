@@ -36,7 +36,7 @@ The team needs to utilize the Jupyter Notebook, which will take the existing SQL
 
 ### Steps Required
 
-1. Deploy the Azure OpenAI resource in either **East US** or **Australia East** regions to avoid Azure OpenAI **gpt-4o** model TPM quota issue.
+1. Deploy the Azure OpenAI resource in **Australia East** region to avoid Azure OpenAI **gpt-4o** model TPM quota issue.
 1. Generate PDF files from the data provided.
 1. Download the [sample Jupyter Notebook](https://openhackguides.blob.core.windows.net/ai-openhack/generate-markdown.ipynb) to generate the files needed.
 1. Here is a [requirements.txt file](https://openhackguides.blob.core.windows.net/ai-openhack/requirements.txt) as well.
